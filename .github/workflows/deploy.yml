@@ -61,26 +61,26 @@ jobs:
           version: "10"
           run_install: false
 
-        # 安装依赖
+      # 安装依赖
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-        # 构建项目
+      # 构建项目
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
           pnpm build
 
-        # 资源拷贝
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./docs/.vitepress/dist
-          destination: ./_site
+      # 添加 .nojekyll 防止 GitHub Pages 用 Jekyll 处理（Jekyll 会忽略 .html 文件和 _ 开头的目录）
+      - name: Add .nojekyll
+        run: touch ./docs/.vitepress/dist/.nojekyll
 
-        # 上传 _site 的资源，用于后续部署
+      # 上传构建产物，用于后续部署
+      # 注：不使用 jekyll-build-pages，VitePress 产物已是纯静态 HTML，Jekyll 会改变文件结构导致 .html 链接 404
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs/.vitepress/dist
 
   # 部署任务
   deploy:

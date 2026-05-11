@@ -20,6 +20,8 @@ export default defineConfig({
   title: '我的博客',
   description: 'shuyin的博客',
   ignoreDeadLinks: true,
+  // GitHub Pages 不支持服务端 URL 重写，禁用 cleanUrls 确保链接带 .html 后缀可直达
+  cleanUrls: false,
   // lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
