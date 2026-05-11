@@ -58,6 +58,7 @@ export default defineConfig({
           { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
           { text: '⚙️ 博客深度运维与运营', link: '/guide/blog-ops/' },
           { text: '🧬 从源码看 sugar-blog', link: '/guide/sugar-blog-source/' },
+          { text: '📖 内容编写规范', link: '/guide/contributing-guide/' },
         ]
       },
       {
