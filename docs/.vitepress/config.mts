@@ -79,6 +79,12 @@ export default defineConfig({
               { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
               { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
             ]
+          },
+          {
+            text: '🔧 博客深度运维与运营',
+            items: [
+              { text: '📖 概览', link: '/guide/blog-ops/' },
+            ]
           }
         ]
       },
@@ -147,6 +153,16 @@ export default defineConfig({
             { text: '⑥ 部署到 GitHub Pages', link: '/guide/sugar-blog-tutorial/06-部署到GitHub-Pages' },
             { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
             { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
+          ]
+        },
+        {
+          text: '🔧 博客深度运维与运营', items: [
+            { text: '📖 概览', link: '/guide/blog-ops/' },
+            { text: '① 写作工作流自动化', link: '/guide/blog-ops/01-写作工作流自动化' },
+            { text: '② SEO 全面优化', link: '/guide/blog-ops/02-SEO-全面优化' },
+            { text: '③ 评论系统深度集成', link: '/guide/blog-ops/03-评论系统深度集成' },
+            { text: '④ 访客统计与数据分析', link: '/guide/blog-ops/04-访客统计与数据分析' },
+            { text: '⑤ 内容策略与长期维护', link: '/guide/blog-ops/05-内容策略与长期维护' },
           ]
         },
       ],
