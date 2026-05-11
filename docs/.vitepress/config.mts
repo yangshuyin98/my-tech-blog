@@ -55,6 +55,7 @@ export default defineConfig({
             text: 'Vitepress教程',
             items: [
               { text: '📖 概览', link: '/guide/vitepress-tutorial/' },
+
             ]
           },
           {
