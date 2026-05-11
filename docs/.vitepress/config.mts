@@ -49,13 +49,6 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '指南',
-        items: [
-          { text: '快速开始', link: '/guide/getting-started' },
-          { text: '配置', link: '/guide/configuration' },
-        ]
-      },
-      {
         text: '教程',
         items: [
           {
