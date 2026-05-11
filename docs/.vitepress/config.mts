@@ -117,7 +117,7 @@ export default defineConfig({
           },
           {
             text: '变更日志',
-            link: '/changelog'
+            link: '/versions/changelog'
           }
         ]
       },
