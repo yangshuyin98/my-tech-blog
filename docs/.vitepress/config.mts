@@ -51,37 +51,11 @@ export default defineConfig({
       {
         text: '教程',
         items: [
-          {
-            text: 'Vitepress教程',
-            items: [
-              { text: '📖 概览', link: '/guide/vitepress-tutorial/' },
-
-            ]
-          },
-          {
-            text: 'markdown修复',
-            items: [
-              { text: '📖 概览', link: '/guide/markdown嵌入式内容修复/' },
-            ]
-          },
-          {
-            text: '🍬 sugar-blog 搭建教程',
-            items: [
-              { text: '📖 概览', link: '/guide/sugar-blog-tutorial/' },
-            ]
-          },
-          {
-            text: '🔧 博客深度运维与运营',
-            items: [
-              { text: '📖 概览', link: '/guide/blog-ops/' },
-            ]
-          },
-          {
-            text: '🧬 从源码看 sugar-blog',
-            items: [
-              { text: '📖 概览', link: '/guide/sugar-blog-source/' },
-            ]
-          }
+          { text: '📘 Vitepress教程', link: '/guide/vitepress-tutorial/' },
+          { text: '🔧 Markdown嵌入修复', link: '/guide/markdown嵌入式内容修复/' },
+          { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
+          { text: '⚙️ 博客深度运维与运营', link: '/guide/blog-ops/' },
+          { text: '🧬 从源码看 sugar-blog', link: '/guide/sugar-blog-source/' },
         ]
       },
       {
@@ -91,25 +65,8 @@ export default defineConfig({
           { text: '配置', link: '/sop/more' },
         ]
       },
-
-
       { text: '关于', link: '/about' },
-      {
-        text: '版本',
-        items: [
-          {
-            text: '当前版本',
-            items: [
-              { text: 'v2.0.0 (最新)', link: '/versions/v2' },
-              { text: 'v1.x', link: '/versions/v1' }
-            ]
-          },
-          {
-            text: '变更日志',
-            link: '/versions/changelog'
-          }
-        ]
-      },
+      { text: '版本', link: '/CHANGELOG' },
       { text: '归档', link: '/archives' },
     ],
     socialLinks: [
