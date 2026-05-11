@@ -65,6 +65,20 @@ export default defineConfig({
               { text: '图片路径修复', link: '/guide/markdown嵌入式内容修复/image-path-fix' },
               { text: 'Vue 组件嵌入问题', link: '/guide/markdown嵌入式内容修复/vue-component-embed' },
             ]
+          },
+          {
+            text: '🍬 sugar-blog 搭建教程',
+            items: [
+              { text: '📖 概览', link: '/guide/sugar-blog-tutorial/' },
+              { text: '① 项目初始化', link: '/guide/sugar-blog-tutorial/01-项目初始化' },
+              { text: '② 主题配置详解', link: '/guide/sugar-blog-tutorial/02-主题配置详解' },
+              { text: '③ 导航栏与侧边栏', link: '/guide/sugar-blog-tutorial/03-导航栏与侧边栏' },
+              { text: '④ 编写文章与首页', link: '/guide/sugar-blog-tutorial/04-编写文章与首页' },
+              { text: '⑤ 个性化定制', link: '/guide/sugar-blog-tutorial/05-个性化定制' },
+              { text: '⑥ 部署到 GitHub Pages', link: '/guide/sugar-blog-tutorial/06-部署到GitHub-Pages' },
+              { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
+              { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
+            ]
           }
         ]
       },
@@ -120,6 +134,19 @@ export default defineConfig({
             { text: '代码块内 include 转义', link: '/guide/markdown嵌入式内容修复/code-block-include' },
             { text: '图片路径修复', link: '/guide/markdown嵌入式内容修复/image-path-fix' },
             { text: 'Vue 组件嵌入问题', link: '/guide/markdown嵌入式内容修复/vue-component-embed' },
+          ]
+        },
+        {
+          text: '🍬 sugar-blog 搭建教程', items: [
+            { text: '📖 概览', link: '/guide/sugar-blog-tutorial/' },
+            { text: '① 项目初始化', link: '/guide/sugar-blog-tutorial/01-项目初始化' },
+            { text: '② 主题配置详解', link: '/guide/sugar-blog-tutorial/02-主题配置详解' },
+            { text: '③ 导航栏与侧边栏', link: '/guide/sugar-blog-tutorial/03-导航栏与侧边栏' },
+            { text: '④ 编写文章与首页', link: '/guide/sugar-blog-tutorial/04-编写文章与首页' },
+            { text: '⑤ 个性化定制', link: '/guide/sugar-blog-tutorial/05-个性化定制' },
+            { text: '⑥ 部署到 GitHub Pages', link: '/guide/sugar-blog-tutorial/06-部署到GitHub-Pages' },
+            { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
+            { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
           ]
         },
       ],
