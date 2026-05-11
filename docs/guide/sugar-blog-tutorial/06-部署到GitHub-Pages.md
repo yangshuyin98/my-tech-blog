@@ -1,4 +1,5 @@
 ---
+order: 6
 title: ⑥ 部署到 GitHub Pages
 description: 配置 GitHub Actions 实现推送代码自动部署到 GitHub Pages
 ---

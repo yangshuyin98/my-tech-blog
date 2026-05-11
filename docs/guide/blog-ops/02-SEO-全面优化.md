@@ -1,7 +1,7 @@
 ---
 title: SEO 全面优化
 icon: search
-order: 2
+order: 1
 ---
 
 # SEO 全面优化
@@ -57,9 +57,9 @@ tags:
 ---
 ```
 
-- **title**：控制在 60 字以内，把核心关键词放前面
-- **description**：每个页面必须写，不写的话搜索引擎会随机截取
-- **tags**：帮助内部搜索和标签页分类
+* **title**：控制在 60 字以内，把核心关键词放前面
+* **description**：每个页面必须写，不写的话搜索引擎会随机截取
+* **tags**：帮助内部搜索和标签页分类
 
 ---
 
@@ -96,30 +96,37 @@ export default defineConfig({
 
 如果不想用插件，也可以用一个脚本在构建时生成：
 
-创建 `scripts/generate-sitemap.mjs`：
+创建 `scripts/generate-sitemap.mjs` ：
 
 ```javascript
-import { readdirSync, writeFileSync } from 'fs'
-import { resolve } from 'path'
+import {
+    readdirSync,
+    writeFileSync
+} from 'fs'
+import {
+    resolve
+} from 'path'
 
 const SITE_URL = 'https://你的域名.com'
 const docsDir = resolve('docs')
 
 // 递归获取所有 .md 文件
 function getMdFiles(dir, basePath = '') {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  const files = []
-  for (const entry of entries) {
-    if (entry.name.startsWith('.')) continue
-    const fullPath = resolve(dir, entry.name)
-    if (entry.isDirectory()) {
-      files.push(...getMdFiles(fullPath, `${basePath}/${entry.name}`))
-    } else if (entry.name.endsWith('.md') && entry.name !== 'index.md') {
-      const urlPath = `/posts/${basePath}/${entry.name.replace('.md', '')}`.replace(/\/+/g, '/')
-      files.push(urlPath)
+    const entries = readdirSync(dir, {
+        withFileTypes: true
+    })
+    const files = []
+    for (const entry of entries) {
+        if (entry.name.startsWith('.')) continue
+        const fullPath = resolve(dir, entry.name)
+        if (entry.isDirectory()) {
+            files.push(...getMdFiles(fullPath, `${basePath}/${entry.name}`))
+        } else if (entry.name.endsWith('.md') && entry.name !== 'index.md') {
+            const urlPath = `/posts/${basePath}/${entry.name.replace('.md', '')}`.replace(/\/+/g, '/')
+            files.push(urlPath)
+        }
     }
-  }
-  return files
+    return files
 }
 
 const urls = getMdFiles(resolve(docsDir, 'posts'))
@@ -161,7 +168,7 @@ head: [
 
 ### 3.2 自动生成文章分享卡片
 
-可以用自定义组件实现动态 OG 图片生成。在 `.vitepress/theme/components/` 下创建 `OgImage.vue`：
+可以用自定义组件实现动态 OG 图片生成。在 `.vitepress/theme/components/` 下创建 `OgImage.vue` ：
 
 ```vue
 <script setup>

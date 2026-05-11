@@ -25,7 +25,7 @@ const blogTheme = getThemeConfig({
   recommend: {
     title: '📌 推荐阅读',                          //  '🔥 精选文章'|  '📌 推荐阅读'
     nextText: '下一组',                            // '下一组'  | '换一组',
-    pageSize: 5,
+    pageSize: 20,
     style: 'card'                                 //   "card" | "sidebar" | undefined
   },
   // ====== 精选文章 ======
@@ -37,7 +37,7 @@ const blogTheme = getThemeConfig({
   // ====== 首页标签 ======
   homeTags: {
     title: '🏷 标签',
-    limit: 20,            // 超出部分折叠
+    limit: 30,            // 超出部分折叠
     showCount: true,       // 显示文章数量
     sort: 'desc',          // 按数量降序
   },

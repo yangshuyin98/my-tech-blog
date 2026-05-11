@@ -1,3 +1,8 @@
+---
+title: 代码块内 include 转义
+order: 1
+---
+
 # 代码块内 include 转义
 
 在 Markdown 中，展示 include 指令代码时可能被 Vitepress 误解析。

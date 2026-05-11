@@ -62,23 +62,12 @@ export default defineConfig({
             text: 'markdown修复',
             items: [
               { text: '📖 概览', link: '/guide/markdown嵌入式内容修复/' },
-              { text: '代码块内 include 转义', link: '/guide/markdown嵌入式内容修复/code-block-include' },
-              { text: '图片路径修复', link: '/guide/markdown嵌入式内容修复/image-path-fix' },
-              { text: 'Vue 组件嵌入问题', link: '/guide/markdown嵌入式内容修复/vue-component-embed' },
             ]
           },
           {
             text: '🍬 sugar-blog 搭建教程',
             items: [
               { text: '📖 概览', link: '/guide/sugar-blog-tutorial/' },
-              { text: '① 项目初始化', link: '/guide/sugar-blog-tutorial/01-项目初始化' },
-              { text: '② 主题配置详解', link: '/guide/sugar-blog-tutorial/02-主题配置详解' },
-              { text: '③ 导航栏与侧边栏', link: '/guide/sugar-blog-tutorial/03-导航栏与侧边栏' },
-              { text: '④ 编写文章与首页', link: '/guide/sugar-blog-tutorial/04-编写文章与首页' },
-              { text: '⑤ 个性化定制', link: '/guide/sugar-blog-tutorial/05-个性化定制' },
-              { text: '⑥ 部署到 GitHub Pages', link: '/guide/sugar-blog-tutorial/06-部署到GitHub-Pages' },
-              { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
-              { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
             ]
           },
           {
@@ -123,74 +112,6 @@ export default defineConfig({
       },
       { text: '归档', link: '/archives' },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          text: 'Vitepress教程', items: [
-            { text: '📖 概览', link: '/guide/vitepress-tutorial/' },
-            { text: '① 首页 + 导航栏', link: '/guide/vitepress-tutorial/① 首页 + 导航栏' },
-            { text: '② 侧边导航完全指南', link: '/guide/vitepress-tutorial/② 侧边导航完全指南' },
-            { text: '③ 侧边栏自动生成实战', link: '/guide/vitepress-tutorial/③ 侧边栏自动生成实战' },
-            { text: '④ sugar-blog 实战配置', link: '/guide/vitepress-tutorial/④ sugar-blog 实战配置' },
-            { text: '⑤ 博客方案对比', link: '/guide/vitepress-tutorial/⑤ 博客方案对比' },
-            { text: '⑥ 实战：完整项目', link: '/guide/vitepress-tutorial/⑥ 实战：完整项目' },
-            { text: '⑦ Markdown 进阶技巧', link: '/guide/vitepress-tutorial/⑦ Markdown 进阶技巧' },
-            { text: '⑧ Vue 组件在 Markdown 中', link: '/guide/vitepress-tutorial/⑧ Vue 组件在 Markdown 中' },
-            { text: '⑨ 构建时数据加载', link: '/guide/vitepress-tutorial/⑨ 构建时数据加载' },
-            { text: '⑩ 自定义主题开发', link: '/guide/vitepress-tutorial/⑩ 自定义主题开发' },
-            { text: '⑪ 部署全攻略', link: '/guide/vitepress-tutorial/⑪ 部署全攻略' },
-          ]
-        },
-        {
-          text: 'markdown修复', items: [
-            { text: '📖 概览', link: '/guide/markdown嵌入式内容修复/' },
-            { text: '代码块内 include 转义', link: '/guide/markdown嵌入式内容修复/code-block-include' },
-            { text: '图片路径修复', link: '/guide/markdown嵌入式内容修复/image-path-fix' },
-            { text: 'Vue 组件嵌入问题', link: '/guide/markdown嵌入式内容修复/vue-component-embed' },
-          ]
-        },
-        {
-          text: '🍬 sugar-blog 搭建教程', items: [
-            { text: '📖 概览', link: '/guide/sugar-blog-tutorial/' },
-            { text: '① 项目初始化', link: '/guide/sugar-blog-tutorial/01-项目初始化' },
-            { text: '② 主题配置详解', link: '/guide/sugar-blog-tutorial/02-主题配置详解' },
-            { text: '③ 导航栏与侧边栏', link: '/guide/sugar-blog-tutorial/03-导航栏与侧边栏' },
-            { text: '④ 编写文章与首页', link: '/guide/sugar-blog-tutorial/04-编写文章与首页' },
-            { text: '⑤ 个性化定制', link: '/guide/sugar-blog-tutorial/05-个性化定制' },
-            { text: '⑥ 部署到 GitHub Pages', link: '/guide/sugar-blog-tutorial/06-部署到GitHub-Pages' },
-            { text: '⑦ 高级功能', link: '/guide/sugar-blog-tutorial/07-高级功能' },
-            { text: '⑧ 踩坑记录与常见问题', link: '/guide/sugar-blog-tutorial/08-踩坑记录与常见问题' },
-          ]
-        },
-        {
-          text: '🔧 博客深度运维与运营', items: [
-            { text: '📖 概览', link: '/guide/blog-ops/' },
-            { text: '① 写作工作流自动化', link: '/guide/blog-ops/01-写作工作流自动化' },
-            { text: '② SEO 全面优化', link: '/guide/blog-ops/02-SEO-全面优化' },
-            { text: '③ 评论系统深度集成', link: '/guide/blog-ops/03-评论系统深度集成' },
-            { text: '④ 访客统计与数据分析', link: '/guide/blog-ops/04-访客统计与数据分析' },
-            { text: '⑤ 内容策略与长期维护', link: '/guide/blog-ops/05-内容策略与长期维护' },
-          ]
-        },
-        {
-          text: '🧬 从源码看 sugar-blog', items: [
-            { text: '📖 概览', link: '/guide/sugar-blog-source/' },
-            { text: '① 主题架构与入口分析', link: '/guide/sugar-blog-source/01-主题架构与入口分析' },
-            { text: '② 核心功能模块源码解析', link: '/guide/sugar-blog-source/02-核心功能模块源码解析' },
-            { text: '③ 主题定制与扩展机制', link: '/guide/sugar-blog-source/03-主题定制与扩展机制' },
-            { text: '④ 从阅读源码到二次开发', link: '/guide/sugar-blog-source/04-从阅读源码到二次开发' },
-          ]
-        },
-      ],
-      '/sop/': [
-        {
-          text: 'SOP', items: [
-            { text: '快速开始', link: '/sop/component.md' },
-            { text: '配置', link: '/sop/more' },
-          ]
-        },
-      ],
-    },
     socialLinks: [
       {
         icon: 'github',

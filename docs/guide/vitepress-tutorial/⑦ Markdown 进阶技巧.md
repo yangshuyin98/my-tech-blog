@@ -1,3 +1,8 @@
+---
+title: VitePress Markdown 进阶技巧
+order: 7
+---
+
 # VitePress Markdown 进阶技巧
 
 > 你只用了 Markdown 10% 的能力。这篇把剩下 90% 补上。

@@ -1,3 +1,8 @@
+---
+title: Vue 组件在 Markdown 中使用
+order: 8
+---
+
 # Vue 组件在 Markdown 中使用
 
 > VitePress 最强大的能力之一：文档里直接写 Vue 组件，让静态文档变成交互式应用。

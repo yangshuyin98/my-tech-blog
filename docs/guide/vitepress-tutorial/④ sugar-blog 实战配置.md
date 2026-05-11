@@ -1,3 +1,8 @@
+---
+title: sugar-blog 实战配置教程
+order: 4
+---
+
 # sugar-blog 实战配置教程
 
 > 基于 `@sugarat/theme`，从零搭建一个功能完整的技术博客。
