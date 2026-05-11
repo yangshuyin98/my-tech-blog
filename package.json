@@ -23,6 +23,7 @@
     "vitepress": "2.0.0-alpha.17"
   },
   "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"],
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search",
