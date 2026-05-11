@@ -107,15 +107,26 @@ export default defineConfig({
       '/guide/': [
         {
           text: 'Vitepress教程', items: [
-            { text: '概览', link: '/guide/vitepress-tutorial/' },
-            { text: '首页 + 导航栏', link: '/guide/vitepress-tutorial/① 首页 + 导航栏' },
-            // ...
+            { text: '📖 概览', link: '/guide/vitepress-tutorial/' },
+            { text: '① 首页 + 导航栏', link: '/guide/vitepress-tutorial/① 首页 + 导航栏' },
+            { text: '② 侧边导航完全指南', link: '/guide/vitepress-tutorial/② 侧边导航完全指南' },
+            { text: '③ 侧边栏自动生成实战', link: '/guide/vitepress-tutorial/③ 侧边栏自动生成实战' },
+            { text: '④ sugar-blog 实战配置', link: '/guide/vitepress-tutorial/④ sugar-blog 实战配置' },
+            { text: '⑤ 博客方案对比', link: '/guide/vitepress-tutorial/⑤ 博客方案对比' },
+            { text: '⑥ 实战：完整项目', link: '/guide/vitepress-tutorial/⑥ 实战：完整项目' },
+            { text: '⑦ Markdown 进阶技巧', link: '/guide/vitepress-tutorial/⑦ Markdown 进阶技巧' },
+            { text: '⑧ Vue 组件在 Markdown 中', link: '/guide/vitepress-tutorial/⑧ Vue 组件在 Markdown 中' },
+            { text: '⑨ 构建时数据加载', link: '/guide/vitepress-tutorial/⑨ 构建时数据加载' },
+            { text: '⑩ 自定义主题开发', link: '/guide/vitepress-tutorial/⑩ 自定义主题开发' },
+            { text: '⑪ 部署全攻略', link: '/guide/vitepress-tutorial/⑪ 部署全攻略' },
           ]
         },
         {
           text: 'markdown修复', items: [
-            { text: '概览', link: '/guide/markdown嵌入式内容修复/' },
-            // ...
+            { text: '📖 概览', link: '/guide/markdown嵌入式内容修复/' },
+            { text: '代码块内 include 转义', link: '/guide/markdown嵌入式内容修复/code-block-include' },
+            { text: '图片路径修复', link: '/guide/markdown嵌入式内容修复/image-path-fix' },
+            { text: 'Vue 组件嵌入问题', link: '/guide/markdown嵌入式内容修复/vue-component-embed' },
           ]
         },
       ],
