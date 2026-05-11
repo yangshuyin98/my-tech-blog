@@ -85,6 +85,12 @@ export default defineConfig({
             items: [
               { text: '📖 概览', link: '/guide/blog-ops/' },
             ]
+          },
+          {
+            text: '🧬 从源码看 sugar-blog',
+            items: [
+              { text: '📖 概览', link: '/guide/sugar-blog-source/' },
+            ]
           }
         ]
       },
@@ -163,6 +169,15 @@ export default defineConfig({
             { text: '③ 评论系统深度集成', link: '/guide/blog-ops/03-评论系统深度集成' },
             { text: '④ 访客统计与数据分析', link: '/guide/blog-ops/04-访客统计与数据分析' },
             { text: '⑤ 内容策略与长期维护', link: '/guide/blog-ops/05-内容策略与长期维护' },
+          ]
+        },
+        {
+          text: '🧬 从源码看 sugar-blog', items: [
+            { text: '📖 概览', link: '/guide/sugar-blog-source/' },
+            { text: '① 主题架构与入口分析', link: '/guide/sugar-blog-source/01-主题架构与入口分析' },
+            { text: '② 核心功能模块源码解析', link: '/guide/sugar-blog-source/02-核心功能模块源码解析' },
+            { text: '③ 主题定制与扩展机制', link: '/guide/sugar-blog-source/03-主题定制与扩展机制' },
+            { text: '④ 从阅读源码到二次开发', link: '/guide/sugar-blog-source/04-从阅读源码到二次开发' },
           ]
         },
       ],
