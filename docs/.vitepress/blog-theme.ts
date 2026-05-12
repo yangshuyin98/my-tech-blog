@@ -131,30 +131,28 @@ const blogTheme = getThemeConfig({
   mermaid: false,
 
   // 页脚
-  footer: [
+  footer: {
     // version: true,
-    // version: false,  //不想显示主题版本也可主动关闭
-    // copyright: 'MIT License | shuyin', 
-    {
-      version: false,
-      copyright: {
-        message: 'MIT License | shuyin',
-        icon: `<svg width="128" height="128" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    version: false,  //不想显示主题版本也可主动关闭
+    // copyright: 'MIT License | shuyin',
+    copyright: {
+      message: 'MIT License | shuyin',
+      icon: `<svg width="128" height="128" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <g fill="none">
           <path fill="#FF822D" d="M13.638 3.202a2.936 2.936 0 0 1 4.724 0a2.936 2.936 0 0 0 3.25 1.055a2.936 2.936 0 0 1 3.822 2.778a2.936 2.936 0 0 0 2.008 2.763a2.936 2.936 0 0 1 1.46 4.494a2.936 2.936 0 0 0 0 3.416a2.936 2.936 0 0 1-1.46 4.494a2.936 2.936 0 0 0-2.008 2.763a2.936 2.936 0 0 1-3.823 2.778a2.936 2.936 0 0 0-3.249 1.055a2.936 2.936 0 0 1-4.724 0a2.936 2.936 0 0 0-3.25-1.055a2.936 2.936 0 0 1-3.822-2.778a2.936 2.936 0 0 0-2.008-2.763a2.936 2.936 0 0 1-1.46-4.494a2.936 2.936 0 0 0 0-3.416a2.936 2.936 0 0 1 1.46-4.494a2.936 2.936 0 0 0 2.008-2.763a2.936 2.936 0 0 1 3.823-2.778a2.936 2.936 0 0 0 3.249-1.055Z"/>
           <path fill="#FCD53F" d="M25.062 21.232c-2.89 5.005-9.29 6.72-14.294 3.83c-5.005-2.89-6.72-9.29-3.83-14.294c2.89-5.005 9.29-6.72 14.294-3.83c5.005 2.89 6.72 9.29 3.83 14.294Z"/>
       </g>  </svg>`
-      },
+    },
 
-      icpRecord: {
-        name: '豫ICP备19011724号',
-        link: 'https://beian.miit.gov.cn/'
-      },
-      securityRecord: {
-        name: '公网安备xxxxx',
-        link: 'https://www.beian.gov.cn/portal/index.do'
-      },
-    }],
+    icpRecord: {
+      name: '豫ICP备19011724号',
+      link: 'https://beian.miit.gov.cn/'
+    },
+    securityRecord: {
+      name: '公网安备xxxxx',
+      link: 'https://www.beian.gov.cn/portal/index.do'
+    },
+  },
 
 
   // 主题色修改
