@@ -1,4 +1,17 @@
+---
+title: "更新日志"
+description: "简单日志的变更"
+descriptionHTML: '
+<span style="color:var(--description-font-color);">日志版本</span>
+<pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight"><code>
+    <span class="line"><span style="color:#FFCB6B;">更新日志管理</span></span>
+</code>
+</pre>'
+---
+
 # Changelog
+
+
 
 ## 1.2.0 (2025-04-09)
 

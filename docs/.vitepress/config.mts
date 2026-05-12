@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
-
+import { defineLocaleConfig } from '@sugarat/theme/node'
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -21,15 +21,20 @@ export default defineConfig({
   description: 'shuyin的博客',
   ignoreDeadLinks: true,
   // GitHub Pages 不支持服务端 URL 重写，禁用 cleanUrls 确保链接带 .html 后缀可直达
+  //要使用 VitePress 提供干净的 URL，需要服务器端支持。
   cleanUrls: false,
-  // lastUpdated: true,
-  // 详见：https://vitepress.dev/zh/reference/site-config#head
+  lastUpdated: true,
+
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
+
   themeConfig: {
+    search: {
+      provider: 'local'  //官方VitePress内置的离线全文搜索
+    },
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
@@ -55,7 +60,6 @@ export default defineConfig({
         items: [
           { text: '📘 Vitepress教程', link: '/guide/vitepress-tutorial/' },
           { text: '编写规范文档', link: '/guide/contributing-guide/' },
-
           { text: '🔧 Markdown嵌入修复', link: '/guide/markdown嵌入式内容修复/' },
           { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
           { text: '⚙️ 博客深度运维与运营', link: '/guide/blog-ops/' },
@@ -82,3 +86,6 @@ export default defineConfig({
     ]
   },
 })
+
+
+
