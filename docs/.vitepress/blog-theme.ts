@@ -80,11 +80,11 @@ const blogTheme = getThemeConfig({
     }
   },
   //设置一个全局的提示弹窗 (由 el-alert 驱动)
-  alert: {
-    type: 'success',
-    title: 'xx功能上新啦🎉',
-    duration: 3000
-  },
+  // alert: {
+  //   type: 'success',
+  //   title: 'xx功能上新啦🎉',
+  //   duration: 3000
+  // },
 
   // 开启RSS支持
   RSS,
@@ -176,7 +176,7 @@ const blogTheme = getThemeConfig({
   buttonAfterArticle: {
     openTitle: '赞赏',
     closeTitle: '下次一定',
-    content: '<img src="./wiexin">',
+    content: '<img src="/weixin.png">',
     icon: 'aliPay'
   },
 

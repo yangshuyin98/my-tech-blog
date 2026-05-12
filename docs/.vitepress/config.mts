@@ -59,7 +59,6 @@ export default defineConfig({
         text: '教程',
         items: [
           { text: '📘 Vitepress教程', link: '/guide/vitepress-tutorial/' },
-          { text: '编写规范文档', link: '/guide/contributing-guide/' },
           { text: '🔧 Markdown嵌入修复', link: '/guide/markdown嵌入式内容修复/' },
           { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
           { text: '⚙️ 博客深度运维与运营', link: '/guide/blog-ops/' },

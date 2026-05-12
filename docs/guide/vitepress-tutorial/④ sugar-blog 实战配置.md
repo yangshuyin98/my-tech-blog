@@ -5,21 +5,21 @@ order: 4
 
 # sugar-blog 实战配置教程
 
-> 基于 `@sugarat/theme`，从零搭建一个功能完整的技术博客。
+> 基于 `@sugarat/theme` ，从零搭建一个功能完整的技术博客。
 
 ---
 
 ## 目录
 
-1. [快速创建项目](#快速创建项目)
-2. [项目结构解读](#项目结构解读)
-3. [全局配置详解](#全局配置详解)
-4. [首页配置](#首页配置)
-5. [文章写作规范](#文章写作规范)
-6. [标签与分类系统](#标签与分类系统)
-7. [搜索功能](#搜索功能)
-8. [评论系统](#评论系统)
-9. [部署到 GitHub Pages](#部署到-github-pages)
+01. [快速创建项目](#快速创建项目)
+02. [项目结构解读](#项目结构解读)
+03. [全局配置详解](#全局配置详解)
+04. [首页配置](#首页配置)
+05. [文章写作规范](#文章写作规范)
+06. [标签与分类系统](#标签与分类系统)
+07. [搜索功能](#搜索功能)
+08. [评论系统](#评论系统)
+09. [部署到 GitHub Pages](#部署到-github-pages)
 10. [常见问题](#常见问题)
 
 ---
@@ -28,8 +28,8 @@ order: 4
 
 ### 前置条件
 
-- Node.js >= 18
-- 推荐使用 pnpm（不推荐 yarn）
+* Node.js >= 18
+* 推荐使用 pnpm（不推荐 yarn）
 
 ```bash
 # 安装 pnpm（如果没有）
@@ -43,6 +43,7 @@ pnpm create @sugarat/theme@latest my-blog
 ```
 
 按提示操作：
+
 ```
 ✔ Project name: my-blog
 ✔ Select a template: Default
@@ -56,7 +57,7 @@ pnpm install
 pnpm dev
 ```
 
-浏览器打开 `http://localhost:5173`，你会看到一个完整的博客首页。
+浏览器打开 `http://localhost:5173` ，你会看到一个完整的博客首页。
 
 ---
 
@@ -103,25 +104,25 @@ export default defineConfig({
 
 设置文章自动生成的目录，和 [config.themeConfig.outline](https://vitepress.dev/reference/default-theme-config#outline) 表现一样，文章里单独设置的优先级更高
 
-
-
 ```js
----
+-- -
 # 取二三级标题生成目录
-outline: [2,3]
----
+outline: [2, 3]
+    -- -
 ```
 
-
-
-
-
 ```js
-import { defineConfig } from 'vitepress'
+import {
+    defineConfig
+} from 'vitepress'
 
 // 导入主题的配置
-import { blogTheme } from './blog-theme'
-import { defineLocaleConfig } from '@sugarat/theme/node'
+import {
+    blogTheme
+} from './blog-theme'
+import {
+    defineLocaleConfig
+} from '@sugarat/theme/node'
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -132,81 +133,116 @@ const base = process.env.GITHUB_ACTIONS === 'true' ? '/my-tech-blog/' : '/'
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
 
-  // 继承博客主题(@sugarat/theme)  使用@sugarat/theme构建的博客
-  extends: blogTheme,
-  base,
-  lang: 'zh-cn',
-  title: '我的博客',
-  description: 'shuyin的博客',
-  ignoreDeadLinks: true,
-  // GitHub Pages 不支持服务端 URL 重写，禁用 cleanUrls 确保链接带 .html 后缀可直达
-  cleanUrls: false,
-  // lastUpdated: true,
-  // 详见：https://vitepress.dev/zh/reference/site-config#head
-  head: [
-    // 配置网站的图标（显示在浏览器的 tab 上）
-    // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
-
-  themeConfig: {
-    search: {
-      provider: 'local'  //官方VitePress内置的离线全文搜索
-    },
-    // 展示 2,3 级标题在目录中
-    outline: {
-      level: [2, 3],
-      label: '目录'
-    },
-
-    // 默认文案修改
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '相关文章',
-    lastUpdatedText: '上次更新于',
-
-    // 设置logo
-    logo: '/logo.png',
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/yangshuyin98/my-tech-blog.git',
-    //   text: '去 GitHub 上编辑内容'
-    // },
-    nav: [
-      { text: '首页', link: '/' },
-      {
-        text: '教程',
-        items: [
-          { text: '📘 Vitepress教程', link: '/guide/vitepress-tutorial/' },
-          { text: '编写规范文档', link: '/guide/contributing-guide/' },
-          { text: '🔧 Markdown嵌入修复', link: '/guide/markdown嵌入式内容修复/' },
-          { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
-          { text: '⚙️ 博客深度运维与运营', link: '/guide/blog-ops/' },
-          { text: '🧬 从源码看 sugar-blog', link: '/guide/sugar-blog-source/' },
-          { text: '📖 内容编写规范', link: '/guide/contributing-guide/' },
-        ]
-      },
-      {
-        text: 'sop',
-        items: [
-          { text: '快速开始', link: '/sop/component.md' },
-          { text: '配置', link: '/sop/more' },
-        ]
-      },
-      { text: '关于', link: '/about' },
-      { text: '版本', link: '/CHANGELOG' },
-      { text: '归档', link: '/archives' },
+    // 继承博客主题(@sugarat/theme)  使用@sugarat/theme构建的博客
+    extends: blogTheme,
+    base,
+    lang: 'zh-cn',
+    title: '我的博客',
+    description: 'shuyin的博客',
+    ignoreDeadLinks: true,
+    // GitHub Pages 不支持服务端 URL 重写，禁用 cleanUrls 确保链接带 .html 后缀可直达
+    cleanUrls: false,
+    // lastUpdated: true,
+    // 详见：https://vitepress.dev/zh/reference/site-config#head
+    head: [
+        // 配置网站的图标（显示在浏览器的 tab 上）
+        // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
+        ['link', {
+            rel: 'icon',
+            href: '/favicon.ico'
+        }]
     ],
-    socialLinks: [
-      {
-        icon: 'github',
-        link: 'https://github.com/yangshuyin98/my-tech-blog.git'
-      }
-    ]
-  },
+
+    themeConfig: {
+        search: {
+            provider: 'local' //官方VitePress内置的离线全文搜索
+        },
+        // 展示 2,3 级标题在目录中
+        outline: {
+            level: [2, 3],
+            label: '目录'
+        },
+
+        // 默认文案修改
+        returnToTopLabel: '回到顶部',
+        sidebarMenuLabel: '相关文章',
+        lastUpdatedText: '上次更新于',
+
+        // 设置logo
+        logo: '/logo.png',
+        // editLink: {
+        //   pattern:
+        //     'https://github.com/yangshuyin98/my-tech-blog.git',
+        //   text: '去 GitHub 上编辑内容'
+        // },
+        nav: [{
+                text: '首页',
+                link: '/'
+            },
+            {
+                text: '教程',
+                items: [{
+                        text: '📘 Vitepress教程',
+                        link: '/guide/vitepress-tutorial/'
+                    },
+                    {
+                        text: '编写规范文档',
+                        link: '/guide/contributing-guide/'
+                    },
+                    {
+                        text: '🔧 Markdown嵌入修复',
+                        link: '/guide/markdown嵌入式内容修复/'
+                    },
+                    {
+                        text: '🍬 sugar-blog 搭建教程',
+                        link: '/guide/sugar-blog-tutorial/'
+                    },
+                    {
+                        text: '⚙️ 博客深度运维与运营',
+                        link: '/guide/blog-ops/'
+                    },
+                    {
+                        text: '🧬 从源码看 sugar-blog',
+                        link: '/guide/sugar-blog-source/'
+                    },
+                    {
+                        text: '📖 内容编写规范',
+                        link: '/guide/contributing-guide/'
+                    },
+                ]
+            },
+            {
+                text: 'sop',
+                items: [{
+                        text: '快速开始',
+                        link: '/sop/component.md'
+                    },
+                    {
+                        text: '配置',
+                        link: '/sop/more'
+                    },
+                ]
+            },
+            {
+                text: '关于',
+                link: '/about'
+            },
+            {
+                text: '版本',
+                link: '/CHANGELOG'
+            },
+            {
+                text: '归档',
+                link: '/archives'
+            },
+        ],
+        socialLinks: [{
+            icon: 'github',
+            link: 'https://github.com/yangshuyin98/my-tech-blog.git'
+        }]
+    },
 })
 ```
-
-
 
 ### 全局配置详解
 
@@ -377,7 +413,6 @@ const blogTheme = getThemeConfig({
       },
     }],
 
-
   // 主题色修改
   themeColor: 'el-blue',            //'vp-default'  |  vp-green   |  el-blue
 
@@ -397,7 +432,7 @@ const blogTheme = getThemeConfig({
   buttonAfterArticle: {
     openTitle: '赞赏',
     closeTitle: '下次一定',
-    content: '<img src="./wiexin">',
+    content: '<img src="/weixin.png">',
     icon: 'aliPay'
   },
 
@@ -508,7 +543,7 @@ blog:
 
 | 模式 | 效果 |
 |------|------|
-| `card`（默认） | 头像在信息卡片内，紧凑布局 |
+| `card` （默认） | 头像在信息卡片内，紧凑布局 |
 | `split` | 头像与文字分离，更宽敞 |
 
 ---
@@ -608,9 +643,9 @@ categories:
 ### 标签自动聚合
 
 sugar-blog 会自动：
-1. 在首页右侧生成**标签云**
-2. 点击标签跳转到对应文章列表
-3. 标签数量越多，显示越大
+01. 在首页右侧生成**标签云**
+02. 点击标签跳转到对应文章列表
+03. 标签数量越多，显示越大
 
 ### 自定义标签展示
 
@@ -699,9 +734,9 @@ sugar-blog 支持 Giscus 和 Artalk 两种评论系统。
 ### 方式一：Giscus（推荐，基于 GitHub Discussions）
 
 **前置步骤：**
-1. 去 [giscus.app](https://giscus.app/) 生成配置
-2. 确保仓库开启了 Discussions 功能
-3. 安装 Giscus GitHub App
+01. 去 [giscus.app](https://giscus.app/) 生成配置
+02. 确保仓库开启了 Discussions 功能
+03. 安装 Giscus GitHub App
 
 **配置：**
 
@@ -754,7 +789,7 @@ comment: false    # 这篇文章关闭评论
 
 ### 方式一：GitHub Actions（推荐）
 
-创建 `.github/workflows/deploy.yml`：
+创建 `.github/workflows/deploy.yml` ：
 
 ```yaml
 name: Deploy Blog
@@ -805,7 +840,7 @@ jobs:
 
 ### 配置 base 路径
 
-如果部署到 `https://username.github.io/repo-name/`：
+如果部署到 `https://username.github.io/repo-name/` ：
 
 ```ts
 // config.ts
@@ -815,7 +850,7 @@ export default defineConfig({
 })
 ```
 
-如果是 `https://username.github.io/`（用户主页仓库），则不需要设置 base。
+如果是 `https://username.github.io/` （用户主页仓库），则不需要设置 base。
 
 ### 部署步骤
 
@@ -891,7 +926,7 @@ date: 2024-05-11 10:00:00
 
 ### Q: 如何自定义主题样式？
 
-创建 `docs/.vitepress/theme/index.ts`：
+创建 `docs/.vitepress/theme/index.ts` ：
 
 ```ts
 import Theme from '@sugarat/theme'
@@ -900,13 +935,13 @@ import './custom.css'
 export default Theme
 ```
 
-创建 `docs/.vitepress/theme/custom.css`：
+创建 `docs/.vitepress/theme/custom.css` ：
 
 ```css
 /* 覆盖主题变量 */
 :root {
-  --blog-theme-color: #1e90ff;
-  /* 更多变量见主题文档 */
+    --blog-theme-color: #1e90ff;
+    /* 更多变量见主题文档 */
 }
 ```
 
@@ -945,8 +980,8 @@ export default defineConfig({
 
 ## 下一步
 
-- 👉 [主教程：首页设置 + 导航栏](./index.md)
-- 👉 [侧边导航完全指南](./sidebar-guide.md)
-- 👉 [博客方案对比](./blog-comparison.md)
-- 📖 [sugar-blog 官方文档](https://theme.sugarat.top/)
-- 📦 [sugar-blog GitHub](https://github.com/ATQQ/sugar-blog)
+* 👉 [主教程：首页设置 + 导航栏](./index.md)
+* 👉 [侧边导航完全指南](./sidebar-guide.md)
+* 👉 [博客方案对比](./blog-comparison.md)
+* 📖 [sugar-blog 官方文档](https://theme.sugarat.top/)
+* 📦 [sugar-blog GitHub](https://github.com/ATQQ/sugar-blog)
