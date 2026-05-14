@@ -67,6 +67,8 @@ export default defineConfig({
               { text: 'html标签属性', link: '/Arry/core/html标签属性/' },
               { text: 'CSS标签属性', link: '/Arry/core/CSS标签属性/' },
               { text: 'Flex 弹性、Grid 网格布局', link: '/Arry/core/Flex 弹性、Grid 网格布局/' },
+              { text: '综合PC端项目开发', link: '/Arry/core/综合PC端项目开发/' },
+
               { text: '知识点', link: '/Arry/core/knowledge/' },
             ]
           },

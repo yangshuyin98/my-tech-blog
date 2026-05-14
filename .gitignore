@@ -5,8 +5,10 @@ dist
 *.local
 _temp
 .atomcode
+.claude
 *.txt
 _*.py
 _*.bat
 docs/.vitepress/cache
 docs/.vitepress/dist
+
