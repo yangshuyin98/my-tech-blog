@@ -82,6 +82,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       {
         text: 'Arry',
+
         items: [
           {
             text: 'core',
@@ -91,6 +92,7 @@ export default defineConfig({
               { text: '知识点', link: '/Arry/core/knowledge/' },
             ]
           },
+          { text: 'Arry', link: '/Arry/core/' },
           { text: 'Git', link: '/Arry/git/' },
           { text: 'Markdown', link: '/Arry/markdown/' },
         ]

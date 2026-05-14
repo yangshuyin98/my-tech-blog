@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
 const { theme } = useData()
 
@@ -72,7 +72,7 @@ const articleList = computed(() => {
       <li v-for="article in articleList" :key="article.route" class="item">
         <span v-if="article.order" class="order">{{ article.order }}</span>
         <span v-if="article.date && sortBy === 'date'" class="date">{{ article.date }}</span>
-        <a :href="article.route" class="title">{{ article.title }}</a>
+        <a :href="withBase(article.route)" class="title">{{ article.title }}</a>
         <span v-if="article.tag.length" class="tags">
           <span v-for="t in article.tag" :key="t" class="tag">{{ t }}</span>
         </span>

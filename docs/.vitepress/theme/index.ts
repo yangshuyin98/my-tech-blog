@@ -1,6 +1,7 @@
 import BlogTheme from '@sugarat/theme'
 import Archives from './components/Archives.vue'
 import PageList from './components/PageList.vue'
+import ArticlePageList from './components/ArticlePageList.vue'
 
 // 自定义样式重载
 import './style.css'
@@ -14,5 +15,6 @@ export default {
     BlogTheme.enhanceApp?.(ctx)
     ctx.app.component('Archives', Archives)
     ctx.app.component('PageList', PageList)
+    ctx.app.component('ArticlePageList', ArticlePageList)
   }
 }
