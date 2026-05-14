@@ -1400,11 +1400,19 @@ ul {
 
 ![CSS开发天猫登录注册页面](https://www.arryblog.com/assets/img/15.bfef4364.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7080180066935636480?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7080180066935636480?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 
 ### 2、CSS 表格布局（QQ 音乐排行榜效果）
 
 ![CSS表格布局](https://www.arryblog.com/assets/img/16.73efe725.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7080116473900990991?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7080116473900990991?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node fix-details.js)",
+      "Read(//c/Users/shuyin/AppData/Roaming/Typora/themes/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\shuyin\\AppData\\Roaming\\Typora\\themes"
+    ]
+  }
+}

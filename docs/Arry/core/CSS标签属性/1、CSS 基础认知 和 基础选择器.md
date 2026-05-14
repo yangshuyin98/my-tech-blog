@@ -785,7 +785,11 @@ div span {
 - C、外部样式表的引入标签要放在 head 标签中
 - D、外部文件的路径地址要放在 rel 属性中
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">正确答案： B C</p></details>
+:::details 自己先分析，再点击查看正确答案
+
+正确答案： B C
+
+:::
 
 ### 2、以下代码最终的显示效果
 

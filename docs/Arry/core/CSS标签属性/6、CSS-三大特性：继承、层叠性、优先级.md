@@ -738,7 +738,13 @@ span:hover {
 </body>
 ```
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看答案解析</summary><p style="line-height: 1.7;"><strong style="font-weight: 600;">1、鼠标滑动到 span 上时，span 中的文字有没有放大和变红？为什么？</strong></p><ul style="padding-left: 1.2em; line-height: 1.7;"><li>答：不会变红，因为<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span: hover;</code>的优先级低于<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code>，所以最终<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">color: blue;</code></li></ul><p style="line-height: 1.7;"><strong style="font-weight: 600;">2、如果鼠标滑动到 span 上时，想实现文字变红，如何修改代码，达到效果？</strong></p><ul style="padding-left: 1.2em; line-height: 1.7;"><li>答： 把<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span:hover</code>选择器，改成<span>&nbsp;</span><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">p span:hover { }</code><span>&nbsp;</span>提高选择器的优先级</li></ul><p style="line-height: 1.7;"><strong style="font-weight: 600;">3、span 标签最终的呈现效果是什么？为什么是这样的？</strong></p><ul style="padding-left: 1.2em; line-height: 1.7;"><li>答：span 最终以<span>&nbsp;</span><strong style="font-weight: 600;">16px</strong>、<span>&nbsp;</span><strong style="font-weight: 600;">蓝色</strong><span>&nbsp;</span>、<strong style="font-weight: 600;">斜体</strong><span>&nbsp;</span>来呈现，当鼠标滑上去时，文字会变大到 30px</li></ul><p style="line-height: 1.7;"><strong style="font-weight: 600;">解读</strong></p><p style="line-height: 1.7;">所以 span 中文字最终以<span>&nbsp;</span><strong style="font-weight: 600;">16px</strong><span>&nbsp;</span><strong style="font-weight: 600;">蓝色</strong><span>&nbsp;</span><strong style="font-weight: 600;">斜体</strong><span>&nbsp;</span>来呈现</p><ul style="padding-left: 1.2em; line-height: 1.7;"><li><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code>中没有<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-style</code>属性，所以其默认的<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-style</code>属性是继承其祖先元素 div 的<span>&nbsp;</span><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-style:italic;</code></li><li><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code>中没有定义<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-size</code><span>&nbsp;</span>则会继承 body 的<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-size:16px</code></li><li><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code><span>&nbsp;</span>中定义了<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">color:blue;</code></li></ul><p style="line-height: 1.7;">当鼠标滑上去时，文字会变大到 30px</p><ul style="padding-left: 1.2em; line-height: 1.7;"><li><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span:hover</code>中的 color 属性并不会生效，因为<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span:hover</code>的优先级低于<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code></li><li><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span:hover</code>中的<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">font-size:30px</code>是生效的，因为在<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.box p span</code>中并没有声明 font-size 属性。</li><li>鼠标滑动到<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">span</code>上时，文字只会变成 30px，并不会改变颜色</li></ul></details>
+:::details 点击查看完整源代码
+
+```html
+span: hover;
+```
+
+:::
 
 ### 2、以下 span 中文字的颜色是？
 
@@ -758,7 +764,13 @@ span:hover {
 </body>
 ```
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看答案解析</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.col</code>并没有作用于 span 标签，所以控制 span 标签的字体颜色为<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">color:blue;</code>蓝色</p></details>
+:::details 点击查看完整源代码
+
+```html
+.col
+```
+
+:::
 
 ### 3、鼠标滑动到 a 标签，a 标签中文字能不能变成黄色
 
@@ -780,7 +792,13 @@ span:hover {
 </body>
 ```
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看答案解析</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">li a:hover</code><span>&nbsp;</span>与<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">.list li a</code>的优先级一样，优先级一样，以写在后面的为主，则鼠标滑上去，文字不会变成黄色</p></details>
+:::details 点击查看完整源代码
+
+```html
+li a:hover
+```
+
+:::
 
 ### 4、以下 li 中和 a 中的文字颜色分别？
 
@@ -802,7 +820,11 @@ span:hover {
 </body>
 ```
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看答案解析</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">ul li 和 ul &gt; li 的优先级是一样的，优先级一样，以写在后面的为主，则 li 最终的效果为橘黄色</p></details>
+:::details 点击查看答案解析
+
+ul li 和 ul > li 的优先级是一样的，优先级一样，以写在后面的为主，则 li 最终的效果为橘黄色
+
+:::
 
 ## 五、本章重难点总结
 

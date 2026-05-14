@@ -92,49 +92,54 @@ order: 7
 - 浮动使用要点：要浮动，并排的盒子都要设置浮动
 - 父盒子要有足够的宽度，否则子盒子会掉下去
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 600px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1px solid #000<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+```html
+<style>
+  .box {
+    width: 600px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+
+  /* 
         要点：要浮动，都浮动
         父盒子要有足够的宽度，否则子盒子会掉下去
-    */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c1</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+    */
+  .box .c1 {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c2</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> gold<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+  .box .c2 {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    float: left;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c3</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  .box .c3 {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    float: left;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>浮动<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <h1>浮动</h1>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c1<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>float: left;<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c2<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>float: left;<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c3<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>float: left;<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <div class="box">
+    <div class="c1">float: left;</div>
+    <div class="c2">float: left;</div>
+    <div class="c3">float: left;</div>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20211128215412868](data:image/png;base64,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BgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAECRxtTU1NT0N41G5bUAANy0epJr2m3f9gsAACwPS5MAAEWEGABAESEGAFBEiAEAFPl/U4ahWpkAZbQAAAAASUVORK5CYII=)
 
@@ -154,36 +159,41 @@ order: 7
 
 同时会影响其后面的元素，但不影响它前面的元素
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 2px solid red<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box1</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box2</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token function" style="color: rgb(240, 141, 73);">rgb</span><span class="token punctuation" style="color: rgb(204, 204, 204);">(</span>133<span class="token punctuation" style="color: rgb(204, 204, 204);">,</span> 206<span class="token punctuation" style="color: rgb(204, 204, 204);">,</span> 235<span class="token punctuation" style="color: rgb(204, 204, 204);">,</span> 0.5<span class="token punctuation" style="color: rgb(204, 204, 204);">)</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 给元素添加左浮动 */</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* float: left; */</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box3</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box1<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>1<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box2<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>2<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box3<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>3<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid red;
+  }
+  .box1 {
+    width: 100px;
+    height: 50px;
+    background-color: khaki;
+  }
+  .box2 {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(133, 206, 235, 0.5);
+    /* 给元素添加左浮动 */
+    /* float: left; */
+  }
+  .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+  }
+</style>
+<div class="box">
+  <div class="box1">1</div>
+  <div class="box2">2</div>
+  <div class="box3">3</div>
+</div>
+```
+
+:::
 
 | 正常布局流中                                                 | box2(蓝色盒子浮动后效果)                                     |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -194,29 +204,34 @@ order: 7
 
 子元素在放不下的情况下会换行显示
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">type</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>text/css<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 240px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 150px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>框1<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>框2<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>框3<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>框4<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style type="text/css">
+  .main {
+    width: 240px;
+    height: 150px;
+    background-color: khaki;
+  }
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    margin: 10px;
+    float: left;
+  }
+</style>
+<body>
+  <div class="main">
+    <div class="box">框1</div>
+    <div class="box">框2</div>
+    <div class="box">框3</div>
+    <div class="box">框4</div>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20220714171345947](data:image/png;base64,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)
 
@@ -224,51 +239,56 @@ order: 7
 
 子盒子会按顺序进行贴靠，如果没有足够空间，则会寻找在前一个兄弟元素
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1px solid #000<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+```html
+<style>
+  .box {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+
+  /* 
         浮动的顺序贴靠特性:
 
         子盒子会按顺序进行贴靠，
         如果没有足够空间，则会寻找在前一个兄弟元素
-    */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c1</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+    */
+  .box .c1 {
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+    float: left;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c2</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+  .box .c2 {
+    width: 100px;
+    height: 50px;
+    background-color: skyblue;
+    float: left;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .c3</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  .box .c3 {
+    width: 100px;
+    height: 50px;
+    background-color: tomato;
+    float: left;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>浮动的顺序贴靠特性<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <h1>浮动的顺序贴靠特性</h1>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c1<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c2<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c3<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <div class="box">
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20211128221934198](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATkAAADVCAYAAAAsEIe8AAADOElEQVR4nO3ZsU0DQRBAUS9yCxRBShPURAc0QegiSGiIIobMOiwkIyTr4Ou9bFYXTPS1q1szMweAqLu9FwC4JZED0kQOSBM5IO24HdZae+0B8CvX/p0eLw/mdLNd4N97efjYewU2nh/vr37juQqkiRyQJnJAmsgBaSIHpIkckCZyQJrIAWkiB6SJHJAmckCayAFpIgekiRyQJnJAmsgBaSIHpIkckCZyQJrIAWkiB6SJHJAmckCayAFpIgekiRyQJnJAmsgBaSIHpIkckCZyQJrIAWkiB6SJHJAmckCayAFpIgekiRyQJnJAmsgBaSIHpIkckCZyQJrIAWkiB6SJHJAmckCayAFpIgekrZmZ87DWYU57rgN/3PvT3huwsV7fDpuEfctNDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkhbMzPnYa3DZgT4037SLDc5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9JEDkgTOSBN5IA0kQPSRA5IEzkgTeSANJED0kQOSBM5IE3kgDSRA9KOlwdrrT32ALiJL5Gbmb32ALgJz1UgTeSANJED0kQOSBM5IO0Tf+YkpGSGc+oAAAAASUVORK5CYII=)
 
@@ -281,33 +301,38 @@ order: 7
 - 浮动的元素不再区分块级元素、行内元素，已经脱离了标准文档流
 - 一律能够设置宽度和高度，即使它是 span 标签 或 a 标签 等等
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">span</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 30px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+:::details 点击查看完整源代码
+
+```html
+<style>
+  span {
+    width: 100px;
+    height: 30px;
+    background-color: tomato;
+    /* 
             只要设置了浮动的元素，不再区分块级元素和行内元素
             都能设置高度和宽度
-        */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">text-align</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> center<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">line-height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 30px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> #fff<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+        */
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>浮动的元素一定能设置宽高<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <h1>浮动的元素一定能设置宽高</h1>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>1<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>2<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>3<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>4<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>5<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>span</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>5</span>
+</body>
+```
+
+:::
 
 ![image-20211128223658112](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi0AAAAvCAYAAAAvvvpQAAADfUlEQVR4nO3dP0gedxgH8G9KJwmUQqE4uLSDm9Cx7aogFIKDQ1fBgFMW0c3JTXHJJChk6eDgkFGIq3Mhm0O7OJRCobRI1rfDvcY3xuR9HZq7573PZznuvOGBH3d+7/fvfTQYDAYBAOi4z9ouAABgEkILAFCC0AIAlCC0AAAlCC0AQAlCCwBQgtACAJTw+Qf/sr78CctgrOOzye7Tbt2i3WrSbjVpt5ombbfoaQEAihBaAIAShBYAoAShBQAoQWgBAEoQWgCAEoQWAKAEoQUAKOHDm8tNhZXk+Uby63Lyou1aGGvrNJl/PHLhKll/2lo5TGhxL/l54fb8zevk2XZ79fBwN234x6tk56DtaviY3bNk9u7F/rwrpze03NuwdNbiXjL/d7K+entt9yw5Pk1OVpPz9krjYzaTJxnZYXQzOV5Knu8JLmWsJE8Wxt9GB6wkX6TX4XIKh4c2my2Bf19OTl63XQyTOt9+/0th51WSx8l3K62UxCQO7oSTg+TyOpn5srWKeKC1n5KZ6+RN24XAeFMYWg6arz7DQQBjbCY/ziUXv7RdCA/x729tV9CaKQwtTI3Fr5vjXy/brYPJLe4185Iu+jG+Xt7uUjMHyUdeEd8mM23X0K7pndNCcZvDyZ1XXqhdt3bUfK0naSYE+gXdErZOk9mrZH07iSHYUuY3kuON4Ul/JuEmQgtd9HY1ynVy0p+HsawXT0eC5XBOmRVE3fa2R2x1/L10yEGyPjoBdzjx/fioN8HF8BDdsnt228OybtVQPQfNBPiZhWSt7Vq437AX8/JQL2Z5w+ctc8lWP3rLhBa642aZ+uVhb74aptL5n83xq368RMvZ+r45zm80vWLHZ81Qw0yS2aXmvCf/AKfCzfPWE4aH6Ia1oyawXFj5VZ4J1N22f9+Q0HAjzn/6u/9HCYsryfmd5+rmeesJPS10wzdzVjFUtHV6ZxhoOPSgLeF/8EOyuzlyPvK87ffjI0FPC90xs9B0Tb+nX7PjS9lfHe5cPHLt8rA3L1D4pM63k7mjd9+TPdsdd7pDy/m2iZxV7FgmW5a2mwIvk2eCZgnvrNbrH8NDAEAJQgsAUILQAgCUILQAACUILQBACUILAFCC0AIAlCC0AAAlPBoMBoO2iwAAGEdPCwBQgtACAJQgtAAAJQgtAEAJQgsAUILQAgCUILQAACUILQBACf8BOHe1zDlTLkEAAAAASUVORK5CYII=)
 
@@ -324,25 +349,30 @@ order: 7
 - 当给子元素添加了浮动后，子元素相当于漂浮起来，不占据页面空间。
 - 这样就造成父级元素在没有设置高度时，高度塌陷问题。 具体看如下案例：
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 2px solid red<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.item</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 添加浮动的前后对比 */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .main {
+    width: 200px;
+    border: 2px solid red;
+  }
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    /* 添加浮动的前后对比 */
+    float: left;
+  }
+</style>
+<body>
+  <div class="main">
+    <div class="item"></div>
+  </div>
+</body>
+```
+
+:::
 
 | item 未设置浮动前效果                                        | item 设置浮动后效果                                          |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -355,28 +385,33 @@ order: 7
 - 常见的图片文字环绕效果，其实现方式主要是将图片左浮动或右浮动
 - 浮动后其相邻的文字，就会环绕图片排列
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> #ddd<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.img</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 80px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 80px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>img<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .box {
+    width: 200px;
+    background-color: #ddd;
+    padding: 10px;
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+    background-color: skyblue;
+    float: left;
+    margin: 10px;
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="img"></div>
     最初，引入float属性是为了能让 web
     开发人员实现简单的布局，包括在一列文本中浮动的图像，文字环绕在它的左边或右边
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20220714170106162](data:image/png;base64,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)
 
@@ -387,145 +422,150 @@ order: 7
 
 ![image-20211129195456172](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA/AAAAL6CAYAAACRs73cAAAS+UlEQVR4nO3ZsY0TYRRGUQ9yCWRUQUwD1OCEhCLILGcUQUKyNdAAMVWQ0cMjXVtgsWKl39d7TjaWNfqCSa7eNjOze+Tzj1874M8+vX29egIAwH152FYvgNt1OMv13atFMwAAAIAnEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAwH71AAAA4AU7zOoFkOECDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABOxXDwC4Wx/fr14AAEDZl29njy7wAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAELDNzKweAQAAAFznAg8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQsL/84ev3nyt2ADzZh3dvnveFD9vzvg8AAP7HYc4eXeABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAICA/eoBADfjMKsXAADAX7nAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAfvVAwBuxXbaVk/gBZvj/NP/fKes5DulwHfKPbn8nl3gAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgIBtZmb1CAAAAOA6F3gAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAgP3lD6fTacUOAAAA4JHj8Xj27AIPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABAh4AAAACBDwAAAAECDgAQAAIEDAAwAAQICABwAAgAABDwAAAAECHgAAAAIEPAAAAAQIeAAAAAgQ8AAAABAg4AEAACBAwAMAAECAgAcAAIAAAQ8AAAABAh4AAAACBDwAAAAECHgAAAAIEPAAAAAQIOABAAAgQMADAABAgIAHAACAAAEPAAAAAQIeAAAAAgQ8AAAABGwzM6tHAAAAANe5wAMAAECAgAcAAICA36HZM59yaOoFAAAAAElFTkSuQmCC)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token doctype" style="color: rgb(153, 153, 153);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>html</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">lang</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>en<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>head</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">charset</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>UTF-8<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">http-equiv</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>X-UA-Compatible<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token attr-name" style="color: rgb(226, 119, 122);">content</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>IE=edge<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">name</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>viewport<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token attr-name" style="color: rgb(226, 119, 122);">content</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>width=device-width, initial-scale=1.0<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>title</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>使用浮动实现网页布局 - arry老师<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>title</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-      <span class="token selector" style="color: rgb(204, 153, 205);">*</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* topbar start */</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">.topbar</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100%<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 40px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> #666<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* end topbar */</span>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用浮动实现网页布局 - arry老师</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* header start */</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">header</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1000px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px auto 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">header .logo</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">header .login</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 30px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+      /* topbar start */
+      .topbar {
+        width: 100%;
+        height: 40px;
+        background-color: #666;
+      }
+      /* end topbar */
+    
+      /* header start */
+      header {
+        width: 1000px;
+        height: 100px;
+        margin: 20px auto 0;
+      }
+      header .logo {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        float: left;
+      }
+      header .login {
+        width: 200px;
+        height: 30px;
+        background-color: orange;
+        float: right;
+      }
+    
+      header .top-nav {
+        width: 660px;
+        height: 50px;
+        background-color: tomato;
+        float: right;
+        margin-top: 20px;
+      }
+      /* end header */
+    
+      /* main start */
+      main {
+        width: 1000px;
+        height: 500px;
+        margin: 30px auto;
+      }
+      main aside.ad {
+        width: 300px;
+        height: 500px;
+        background-color: rgb(190, 225, 239);
+        float: left;
+      }
+      main article {
+        width: 680px;
+        height: 500px;
+        float: right;
+      }
+      main article .banner {
+        width: 680px;
+        height: 380px;
+        background-color: orange;
+      }
+      main article .pics {
+        width: 680px;
+        height: 100px;
+        margin-top: 20px;
+      }
+      main article .pics ul {
+        list-style: none;
+      }
+    
+      main article .pics ul li {
+        width: 160px;
+        height: 100px;
+        background-color: greenyellow;
+        float: left;
+        margin-right: 10px;
+      }
+      main article .pics ul li:last-child {
+        width: 170px;
+        margin-right: 0;
+      }
+      /* end main */
+    
+      /* footer start */
+      footer {
+        width: 1000px;
+        height: 100px;
+        background-color: gray;
+        margin: 0 auto;
+      }
+      /* end footer */
+    </style>
+  </head>
+  <body>
+    <!-- topbar start -->
+    <div class="topbar"></div>
+    <!-- end topbar -->
 
-      <span class="token selector" style="color: rgb(204, 153, 205);">header .top-nav</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 660px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin-top</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* end header */</span>
+    <!-- header start -->
+    <header>
+      <div class="logo"></div>
+      <div class="login"></div>
+      <nav class="top-nav"></nav>
+    </header>
+    <!-- end header -->
+    
+    <!-- main start -->
+    <main>
+      <aside class="ad"></aside>
+      <article>
+        <div class="banner"></div>
+        <div class="pics">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </article>
+    </main>
+    <!-- end main -->
+    
+    <!-- footer statr -->
+    <footer></footer>
+    <!-- end footer -->
+  </body>
+</html>
+```
 
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* main start */</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1000px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 30px auto<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main aside.ad</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token function" style="color: rgb(240, 141, 73);">rgb</span><span class="token punctuation" style="color: rgb(204, 204, 204);">(</span>190<span class="token punctuation" style="color: rgb(204, 204, 204);">,</span> 225<span class="token punctuation" style="color: rgb(204, 204, 204);">,</span> 239<span class="token punctuation" style="color: rgb(204, 204, 204);">)</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 680px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article .banner</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 680px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 380px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article .pics</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 680px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin-top</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article .pics ul</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">list-style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> none<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article .pics ul li</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 160px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> greenyellow<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">main article .pics ul li:last-child</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 170px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* end main */</span>
-
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* footer start */</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">footer</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1000px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> gray<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0 auto<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token comment" style="color: rgb(153, 153, 153);">/* end footer */</span>
-    </span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>head</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- topbar start --&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>topbar<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- end topbar --&gt;</span>
-
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- header start --&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>header</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>logo<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>login<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>nav</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>top-nav<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>nav</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>header</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- end header --&gt;</span>
-
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- main start --&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>main</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>aside</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>ad<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>aside</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>article</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>banner<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>pics<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-          <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>ul</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-          <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>ul</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>article</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>main</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- end main --&gt;</span>
-
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- footer statr --&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>footer</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>footer</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- end footer --&gt;</span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>html</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::
 
 ## 五、BFC 规范 和 浏览器差异
 
@@ -545,71 +585,76 @@ order: 7
 - 方法 3：display 的值是 inline-block、flex 或 inline-flex
 - 方法 4：`overflow：hidden;`
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token doctype" style="color: rgb(153, 153, 153);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>html</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">lang</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>en<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>head</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">charset</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>UTF-8<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">http-equiv</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>X-UA-Compatible<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token attr-name" style="color: rgb(226, 119, 122);">content</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>IE=edge<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>meta</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">name</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>viewport<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token attr-name" style="color: rgb(226, 119, 122);">content</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>width=device-width, initial-scale=1.0<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span> <span class="token punctuation" style="color: rgb(204, 204, 204);">/&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>title</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>创建BFC - arry老师<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>title</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-      <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 5px solid red<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+:::details 点击查看完整源代码
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创建BFC - arry老师</title>
+    <style>
+      .box {
+        width: 500px;
+        border: 5px solid red;
+        /* 
             方法1：float的值不是none 
             该方法可以实现效果，但没有意义，不可能随意给盒子设置浮动
-        */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* float: left; */</span>
+        */
+        /* float: left; */
 
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+        /* 
             方法2：position的值不是static或者relative 
             该方法可以实现效果，但不靠谱
-        */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* position: absolute; */</span>
-
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+        */
+        /* position: absolute; */
+    
+        /* 
             方法3：display的值是 inline-block、flex 或 inline-flex 
             该方法可以实现效果，但，没有意义，可能随便改变盒子的为行内块，获取其他的
-        */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* display: inline-block; */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* display: flex; */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* display: inline-flex; */</span>
-
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+        */
+        /* display: inline-block; */
+        /* display: flex; */
+        /* display: inline-flex; */
+    
+        /* 
             方法4：overflow：hidden；
             该方法可以实现效果，但是，不能满足所有的场景
-        */</span>
-        <span class="token comment" style="color: rgb(153, 153, 153);">/* overflow: hidden; */</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">.box .c1</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-      <span class="token selector" style="color: rgb(204, 153, 205);">.box .c2</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-        <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-      <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-    </span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>head</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>创建BFC<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>h1</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+        */
+        /* overflow: hidden; */
+      }
+      .box .c1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        float: left;
+      }
+      .box .c2 {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>创建BFC</h1>
+    <p>
       BFC （Box Formatting Context
       ，块级格式上下文）是页面上的一个隔离的独立容器
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+    </p>
 
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c1<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>c2<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>html</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+    <div class="box">
+      <div class="c1"></div>
+      <div class="c2"></div>
+    </div>
+  </body>
+</html>
+```
+
+:::
 
 
 
@@ -623,57 +668,62 @@ order: 7
 - BFC 可以取消盒子 margin 塌陷
 - BFC 可以阻止元素被浮动元素覆盖
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">p</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 垂直方向上下margin会重合 距离依然是：50 */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+```html
+<style>
+  p {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    /* 垂直方向上下margin会重合 距离依然是：50 */
+    margin: 50px;
+  }
+
+  /* 
     BFC作用一：可以取消盒子margin塌陷
     添加overflow：hidden; 创建BFC
-  */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">div</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">overflow</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> hidden<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+  */
+  div {
+    overflow: hidden;
+  }
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+  /* 
     BFC作用二：可以阻止元素被浮动元素覆盖
     没有实际意义，实际开发不会这么用，只具有理论意义，要明白
     需要并排显示的盒子，要么都浮动，要么都不写，以下的写法是不合法规范的
-  */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box1</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+  */
+  .box1 {
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+    float: left;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box2</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* float: left; */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">overflow</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> hidden<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  .box2 {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    /* float: left; */
+    overflow: hidden;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <div>
+    <p></p>
+  </div>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  <div>
+    <p></p>
+  </div>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>section</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box1<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>section</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>section</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box2<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>section</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <section class="box1"></section>
+  <section class="box2"></section>
+</body>
+```
+
+:::
 
 ### 3、浏览器差异
 
@@ -690,43 +740,48 @@ order: 7
 - 让内部有浮动的父盒子形成 BFC，它就能关闭住内部的浮动。
 - 此时，最好的方法就是 `overflow: hidden;` 属性
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">*</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">div</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+```html
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    /* 
         清除浮动方法1：
         让内部有浮动的父盒子形成BFC，它就能关闭住内部的浮动
         此时，最好的方法就是 overflow: hidden; 属性
-      */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">overflow</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> hidden<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-bottom</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+      */
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">p</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  p {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin-right: 10px;
+    float: left;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <div>
+    <p></p>
+    <p></p>
+  </div>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <div>
+    <p></p>
+    <p></p>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20211129223143866](https://www.arryblog.com/assets/img/image-20211129223143866.f0d68d54.png)
 
@@ -745,49 +800,54 @@ order: 7
 
 **强烈推荐使用，最佳实践（大厂都这么用）**
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">*</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">div</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 2px solid red<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-bottom</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+```html
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+  div {
+    border: 2px solid red;
+    margin-bottom: 20px;
+  }
+
+  /* 
       添加伪元素
       ::after 匹配选中的元素的最后一个子元素
-    */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">/* 转为块级元素 */</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+    */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    /* 转为块级元素 */
+    display: block;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">p</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  p {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin-right: 10px;
+    float: left;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <div class="clearfix">
+    <p></p>
+    <p></p>
+  </div>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <div class="clearfix">
+    <p></p>
+    <p></p>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20211129230743346](https://www.arryblog.com/assets/img/image-20211129230743346.ebc18298.png)
 
@@ -797,52 +857,57 @@ order: 7
 
 **不推荐**
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">*</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+:::details 点击查看完整源代码
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">div</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">border</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 2px solid red<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+```html
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">p</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-right</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+  div {
+    border: 2px solid red;
+  }
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">/* 
+  p {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin-right: 10px;
+    float: left;
+  }
+
+  /* 
       清除浮动方法4：
       在两个父盒子之间 "隔墙" 隔一个携带 `clear: both;`的盒子
-    */</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.cl</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
+    */
+  .cl {
+    clear: both;
+  }
 
-  <span class="token selector" style="color: rgb(204, 153, 205);">.h20</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  .h20 {
+    height: 20px;
+  }
+</style>
 
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+<body>
+  <div>
+    <p></p>
+    <p></p>
+  </div>
 
-  <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!-- 在两个父盒子之间 "隔墙" 隔一个携带 `clear: both;`的盒子 --&gt;</span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>cl h20<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
+  <!-- 在两个父盒子之间 "隔墙" 隔一个携带 `clear: both;`的盒子 -->
+  <div class="cl h20"></div>
 
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>p</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+  <div>
+    <p></p>
+    <p></p>
+  </div>
+</body>
+```
+
+:::
 
 ![image-20211129231600890](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzQAAADyCAYAAACbK4BDAAAF1klEQVR4nO3dQW7TUBRA0W/kndA9RSKbiBfVrgq6FTNADYIi4YaqP1ecM/oDD570RlffiZd93/cBAAAQsm3bOJ1O49PsQQAAAG4laAAAgKz167fn2TMAAADcZH14+Dx7BgAAgLe5XMYYXjkDAADC1uvpceIUvHY++Jy93ZejewMA4F24oQEAALLW8fIZmqdl7iT86ujngeztvvisEwDAx9i2MYYbGgAAIEzQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIGsdyzJ7Bv7kbC9J9gYA8DEulzGGGxoAACBsvZ72feIYAAAAB/z2hpkbGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMhar6dlmTgGAADA27mhAQAAsgQNAACQJWgAAICsn7+heZw4Ba+dDz5nb/fl6N4AAHgXbmgAAICsdez7j9OTfzm7Ky97+Rt7uy9H9wYAwL/ZtjGGGxoAACBM0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJAlaAAAgCxBAwAAZAkaAAAgS9AAAABZggYAAMgSNAAAQJagAQAAsgQNAACQJWgAAIAsQQMAAGQJGgAAIEvQAAAAWYIGAADIEjQAAECWoAEAALIEDQAAkCVoAACALEEDAABkCRoAACBrvZ6+7BPH4Gb2BgDAf8wNDQAAkCVoAACALEEDAABkCRoAACBL0AAAAFmCBgAAyBI0AABAlqABAACyBA0AAJD1HaLtJtCCSnzaAAAAAElFTkSuQmCC)
 
@@ -855,298 +920,323 @@ order: 7
 
 ![image-20220714184431966](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAngAAADqCAIAAAC+xK8MAAAGIklEQVR4nO3dz4vUdRzH8Y/RNZYO1e7FQ0UHbUEEDwnVrCFYeFsoSEkaEHa3kwjFbisItisJ5q3ttJFpELGBsaQg5VaQNwu33UPQxYjdVSJk/4DpoJbuL5zZee2M9Xic5vud78D7NE8+8/3wnU21Wq0AABkPtXoAAPgvE1oACBJaAAgSWgAIEloACHp4yfHNuZMtmQMAHnQdXYeXn7SiBYAgoQWAIKEFgCChBYAgoQWAIKEFgCChBYAgoQWAIKEFgKClT4Za29j8gdAc/J/1d37S8Gc7fn2xiZMArO3mM9/V+xErWgAIEloACBJaAAhaX2inTw1uP3WtSaNAk0yPVHaMzLZ6CoBSSr2boZZY/ONq2b330WbNAs1w+XR1uHJsbkur5wAopawztH/9PlmeHnikWbNAA2bHNw2MLTt7pKtyZIWLq+O1N7rzMwH8q87QTp8aPDB676lXBpd/y93S//Xxgzsamgru25Zqbap65+DPz47u2fekmgJtpM7Qdh86fuXQ7dcLE2dennz2/Mfbnmj6VNCQ2XP7pnrOvqWyQBtpfDPU4k+TM7v3PqWytIvpkYGxUtm167FWDwJwl4ZDe/23S5Nbe553g5Y2cfl0dbiU917d09nqSQDu1uhmqIUffrlYZi5uHRxa5QI3aNlA89+8vXO8lFKGB3YMr3xJz9kvTrxusQtsuAZDe+2rvjI6c3zP47cOFy+8OXpp79D7vRa4tMDseNexS6WUUvp/nKo+t8IV0yOVTzd2JoDbGvrpeGHi+7GhF+5UFlrpxoXegbFSOTb3YX+rRwFYQQOhvf7zB31ldN/m5g8DdZu/+u2X1fHaUbdmgTZV90/Hixfe+bx8NGQ5S3vofOlErdUzAKyhztAuTJwbKq+ddy8WAO5LfaG9tQdqW5k4s71vZumbk6MX++45YeMxG21sZ2W1B5X1nN3QSQBuqy+0mw/e2F9KKb37r/RGxoF1sesYaDvr+lMBaCNbqrWp1d7rfnfqxEbOAvAPf/wOAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQUILAEFCCwBBQgsAQZtqtdrdxzfnTrZqFAB4oHV0HV5+0ooWAIKEFgCChBYAgoQWAIKEFgCChBYAgoQWAIKEFgCChBYAgpY+GQoAaCIrWgAIEloACBJaAAgSWgAIEloACBJaAAgSWgAI+hv4h65qmRKdXgAAAABJRU5ErkJggg==)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 600px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .left</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .right</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 380px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*清除浮动*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>left<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>左<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>right<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>右<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .box {
+    width: 600px;
+    background-color: khaki;
+    padding: 10px;
+  }
+  .box .left {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+  }
+  .box .right {
+    width: 380px;
+    height: 200px;
+    background-color: pink;
+    float: right;
+  }
+  /*清除浮动*/
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+</style>
+<body>
+  <div class="box clearfix">
+    <div class="left">左</div>
+    <div class="right">右</div>
+  </div>
+</body>
+```
+
+:::
 
 ### 2、实现一行多列式布局
 
 ![image-20220714184953741](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnQAAADjCAIAAACD9x5KAAAGe0lEQVR4nO3dXWiVBQDG8dfwspCgzIF4URHkB4ngRUI1DWGFdwPDDxIHgq6bRChcLrO1SYLZ3bpxkakRYWCMHEi5CvLOyrkFUTdmzSkRsu5PF0vJr9k5Pue8efz9rs77cfFcDP68nNfjjEqlUgAAOfeUPQAAmo24AkDYzH8fXBrfW9YOALijzWrZduWzJ1cACBNXAAgTVwAIE1cACBNXAAgTVwAIE1cACBNXAAgTVwAIm3nrWy7rP7+hfjtogC1zPpjm6r6WtoYtgWa1dXxomquzfnqmYUuoh0uPffUf7/TkCgBh4goAYeIKAGG3EdeRfduX7Dubm8L/0Lmehbt6fih7BTSxkd7Wpb1jZa8grYoXmq4x+dvpYuWq+4NbAO4yJw907GjtGZ9f9g7Sao/rn78OFo923hfcAtDcxgZmdPZfd7a7pbX7Bjd3DFReXFT/TdRFNXEd2bd9Q9/Vp57ffv3fyZQtn+/etLTWVZTjXM/C/a9ff3rdrmtOvnloZ/cTjZkETWV+R2W44/LBH4ffaFv3sII2p2riumjr7lNb//k8ceTgc4MLj72/+KF6rKI0jx8eXr3mgSuH53oW7i+uSulfH7289+cylkGTGTu6bnj5oZeUtTnV+ELT5HeDoytXPaKsALUY6e3sL1pXrHiw7CHUR21xvfDLicEFy5/yhStADU4e6NhRFG+tbptT9hLqpKYXmia+OXO8GD2+YHvXTW7whSvATZz/4pVlA0VRFDs6l+648S3LD32yZ62H2jtZLXE9+9nmom90d9vsqcPJoY19J1Z1vd3uQbYJ/Li2ddfaa85d/0LTxobtgWYzNtDSc6IoiqLY8u1wx5M3uGOkt/XDxm4ir/q4Thz5ur/r6VOz6zCG8nmhCero4lB7Z3/R2jO++veWzrLHUE/VxvXC9+9sLvpG59VlDCWb231m9a3uuXfNuzsbsQWa0PnTX3469a9XxwbK3kJ9VRfXyaFXPy7e62rz2ApQtTnP7qmUvYHGqCauE0eOdhUvHPPdKgBMp4q4Tr3HtLg4cnDJ5tFrLw72Hd981QkvDANMp39Z681+4m75oYYuIa+KuM7bdHF9URRF+/pT7fWaA3C38LZwM6v9h/u5G8ztPuP1Jcib31EZvtm1Ra8N72nkFurBf5YOAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYTMqlcqVg0vje0ucAgB3rlkt26589uQKAGHiCgBh4goAYeIKAGHiCgBh4goAYeIKAGHiCgBh4goAYVf9QhMAcPs8uQJAmLgCQJi4AkDY317V2zn8ouBQAAAAAElFTkSuQmCC)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 600px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .left</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 150px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .middle</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 280px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> aquamarine<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-left</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .right</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 150px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*清除浮动*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>left<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>左<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>middle<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>右<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>right<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>右<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .box {
+    width: 600px;
+    background-color: khaki;
+    padding: 10px;
+  }
+  .box .left {
+    width: 150px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+  }
+  .box .middle {
+    width: 280px;
+    background-color: aquamarine;
+    height: 200px;
+    float: left;
+    margin-left: 10px;
+  }
+  .box .right {
+    width: 150px;
+    height: 200px;
+    background-color: pink;
+    float: right;
+  }
+  /*清除浮动*/
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+</style>
+<body>
+  <div class="box clearfix">
+    <div class="left">左</div>
+    <div class="middle">右</div>
+    <div class="right">右</div>
+  </div>
+</body>
+```
+
+:::
 
 ### 3、三列式布局，中间自适应
 
 ![GIF 2022-7-14 18-59-29](https://www.arryblog.com/assets/img/GIF-2022-7-14-18-59-29.723006fc.gif)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">body</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100%<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">box-sizing</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> border-box<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .left</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 150px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .middle</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> aquamarine<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0px 160px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.box .right</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 150px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*清除浮动*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>box clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>left<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>左<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>right<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>右<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>middle<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>中<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  body {
+    margin: 0;
+  }
+  .box {
+    width: 100%;
+    background-color: khaki;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .box .left {
+    width: 150px;
+    height: 200px;
+    background-color: skyblue;
+    float: left;
+  }
+  .box .middle {
+    background-color: aquamarine;
+    height: 200px;
+    margin: 0px 160px;
+  }
+  .box .right {
+    width: 150px;
+    height: 200px;
+    background-color: pink;
+    float: right;
+  }
+  /*清除浮动*/
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+</style>
+<body>
+  <div class="box clearfix">
+    <div class="left">左</div>
+    <div class="right">右</div>
+    <div class="middle">中</div>
+  </div>
+</body>
+```
+
+:::
 
 ### 4、多行多列式布局
 
 ![image-20220714190525062](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1AAAAG4CAIAAADE8ZGgAAANvklEQVR4nO3dwUucZwLH8adLr4KkZa0TihR2sRcPIqS30kMI2cOABISFEHJKpQEPgRF6EJKCh0IGchAs4klCYEEo0jk0hByW3BoQ2Xpp6EIYSrSWNgj+Ae5BkybdbWB13rz1N58PHnRk5n0ODzPfed73mXljf3+/AACQ6091DwAAgGoJPgCAcIIPACCc4AMACPfm0e72+cbPvR0HAACv8On420e+rxU+AIBwgg8AIJzgAwAIJ/gAAMIJPgCAcIIPACCc4AMACCf4AADCCT4AgHBH/KaNV/vknZUqHpZ4X/x4+RX/Na84GvOKKphXVOHV8+o4rPABAIQTfAAA4QQfAEA4wQcAEK7y4Ht4q3Vpba/qo9Av1u8PNlrPflZWt+seDyG67V/n1f2HdY+GON12ozU4vbFT9zjoZ5Xs0j2ws7YyenWzlNJcrO4g9JVuu/lkeb09NVzKwQSbaHU77dZE3ePiZNtbnf7+w6327uHvn51rlHtbZ8/UPSxiPLy1MF/3GKCiFb691elWq1zY3ZqZq+YA9KWR1tblg9orpQxNXlhulvkH3VqHRICBqaXneTcw9fH5Up50LR7TK9sbCzfHms26h0Hfqyj4BqaW2rcnB6p5cAA4EfZWb9wpixdm3q97IPQ9mzY4uZ52O6X53qm6h0GSbrt5t7l44flCMhzHztqXVzrnZyx/8AdQ4TV8UKW91emF+TK2/IFnUo5te+PSxJ1OKaWMLa+3W2qPnli/P3q1LK+fPVOKnUDUTvBxEnXbjYX5UuY6l63E0APD47e3xkspB9cfD3bO27TBsR2sFl/3HMUfhFO6nDA7ayuDjYX5g5UY+3PpsYGppZm5cnfBh0lxLD+tTi/Mz864lp0/Dit8nCSHn/UzO7N7baTusZDq1EizzD9+WoqXao5q886VTimdhcGbL956Z7Rzx9MXdRF8nBzbG62rm83F6940U6Wn3U5p/s1mII5h7Nru1ktT6OGt1rnvLj5aGh+qa0j0Pad0OTF2vvm2U+x3o9fW77/wbUAHm4FMMyCNFT5OlrvnGndfvmVsed3WDY5h4mz7h5XBxubhn7Mzu0vOuAFpqg6+kdZWu+JD0C+GJi/vTtY9CBKZWlTtzLWD7+6D2jilCwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIQTfAAA4QQfAEA4wQcAEE7wAQCEE3wAAOEEHwBAOMEHABBO8AEAhBN8AADhBB8AQDjBBwAQTvABAIR7Y39//wh3+3zj554PBQCA3/Pp+NtHvq8VPgCAcIIPACCc4AMACCf4AADCCT4AgHCCDwAgnOAD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)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">.container</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 800px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0px auto<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 5px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.item</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 190px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> khaki<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 5px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*清除浮动*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>container clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>1<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>2<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>3<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>4<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>5<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>6<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>7<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>item<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>8<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+:::details 点击查看完整源代码
+
+```html
+<style>
+  .container {
+    width: 800px;
+    background-color: skyblue;
+    margin: 0px auto;
+    padding: 5px;
+  }
+  .item {
+    width: 190px;
+    height: 200px;
+    background-color: khaki;
+    float: left;
+    margin: 5px;
+  }
+  /*清除浮动*/
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+</style>
+<body>
+  <div class="container clearfix">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+</body>
+```
+
+:::
 
 ### 5、实现整站结构布局
 
 ![image-20220714194607054](data:image/png;base64,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DwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQoeQAAAChR8gAAAFCi5AEAAKBEyQMAAECJkgcAAIASJQ8AAAAlSh4AAABKlDwAAACUKHkAAAAoUfIAAABQouQBAACgRMkDAABAiZIHAACAEiUPAAAAJUoeAAAASpQ8AAAAlCh5AAAAKFHyAAAAUKLkAQAAoETJAwAAQImSBwAAgBIlDwAAACVKHgAAAEqUPAAAAJQo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)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); color: rgb(44, 62, 80); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整源代码</summary><div class="language-html extra-class" style="position: relative; background-color: rgb(40, 44, 52); border-radius: 6px;"><pre class="language-html" style="color: rgb(204, 204, 204); background: transparent; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.4; tab-size: 4; hyphens: none; padding: 1.25rem 1.5rem; margin: 0.85rem 0px; overflow: auto; border-radius: 6px; position: relative; z-index: 1;"><code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(255, 255, 255); padding: 0px; margin: 0px; font-size: 0.85em; background-color: transparent; border-radius: 0px;"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token style"><span class="token language-css">
-  <span class="token selector" style="color: rgb(204, 153, 205);">body,
-  ul</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">ul</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">padding</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">list-style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> none<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.clearfix::after</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">display</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> block<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">content</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> <span class="token string" style="color: rgb(126, 198, 153);">""</span><span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">clear</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> both<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.top</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> skyblue<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.container</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 1000px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px auto<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*header部分样式*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.container .header .logo</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 120px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> pink<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.container .header .nav</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 700px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.nav .nav-top</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 50px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> turquoise<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.nav .nav-bottom</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 60px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100%<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-top</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 10px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token comment" style="color: rgb(153, 153, 153);">/*main-top部分样式*/</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-top</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main-top .main-top-menu</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 200px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> lavender<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main-top .main-top-content</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 520px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
+:::details 点击查看完整源代码
 
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-left</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 15px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main-top .main-top-recommend</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 250px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 500px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> orange<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> right<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main-top-content .top-content-banner</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 300px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> tomato<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.main-top-content .top-content-hot</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 180px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin-top</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 20px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.top-content-hot ul li</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">width</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 120px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 180px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> aquamarine<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">margin</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 0px 5px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">float</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> left<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-  <span class="token selector" style="color: rgb(204, 153, 205);">.footer</span> <span class="token punctuation" style="color: rgb(204, 204, 204);">{</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">height</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> 100px<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-    <span class="token property" style="color: rgb(248, 197, 85);">background-color</span><span class="token punctuation" style="color: rgb(204, 204, 204);">:</span> #ddd<span class="token punctuation" style="color: rgb(204, 204, 204);">;</span>
-  <span class="token punctuation" style="color: rgb(204, 204, 204);">}</span>
-</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>style</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>top<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>container<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!--header start--&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>header clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>logo<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>nav clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>nav-top<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>nav-bottom<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!--header end--&gt;</span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!--main start--&gt;</span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main-top clearfix<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main-top-menu<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main-top-content<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-          <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>top-content-banner<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-          <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>top-content-hot<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>ul</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-              <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>1<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-              <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>2<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-              <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>3<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-              <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>4<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>li</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-            <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>ul</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-          <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-        <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>main-top-recommend<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-      <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-    <span class="token comment" style="color: rgb(153, 153, 153);">&lt;!--main start--&gt;</span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-  <span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;</span>div</span> <span class="token attr-name" style="color: rgb(226, 119, 122);">class</span><span class="token attr-value" style="color: rgb(126, 198, 153);"><span class="token punctuation attr-equals" style="color: rgb(204, 204, 204);">=</span><span class="token punctuation" style="color: rgb(204, 204, 204);">"</span>footer<span class="token punctuation" style="color: rgb(204, 204, 204);">"</span></span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>div</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-<span class="token tag" style="color: rgb(226, 119, 122);"><span class="token tag" style="color: rgb(226, 119, 122);"><span class="token punctuation" style="color: rgb(204, 204, 204);">&lt;/</span>body</span><span class="token punctuation" style="color: rgb(204, 204, 204);">&gt;</span></span>
-</code></pre></div></details>
+```html
+<style>
+  body,
+  ul {
+    margin: 0;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .top {
+    height: 50px;
+    background-color: skyblue;
+  }
+  .container {
+    width: 1000px;
+    margin: 10px auto;
+  }
+  /*header部分样式*/
+  .container .header .logo {
+    width: 100px;
+    height: 120px;
+    background-color: pink;
+    float: left;
+  }
+  .container .header .nav {
+    width: 700px;
+    float: right;
+  }
+  .nav .nav-top {
+    width: 500px;
+    height: 50px;
+    background-color: turquoise;
+    float: right;
+  }
+  .nav .nav-bottom {
+    height: 60px;
+    width: 100%;
+    background-color: tomato;
+    float: right;
+    margin-top: 10px;
+  }
+  /*main-top部分样式*/
+  .main {
+    margin-top: 20px;
+  }
+  .main-top .main-top-menu {
+    width: 200px;
+    height: 500px;
+    background-color: lavender;
+    float: left;
+  }
+  .main-top .main-top-content {
+    width: 520px;
+    height: 500px;
+
+    float: left;
+    margin-left: 15px;
+  }
+  .main-top .main-top-recommend {
+    width: 250px;
+    height: 500px;
+    background-color: orange;
+    float: right;
+  }
+  .main-top-content .top-content-banner {
+    height: 300px;
+    background-color: tomato;
+  }
+  .main-top-content .top-content-hot {
+    height: 180px;
+    margin-top: 20px;
+  }
+  .top-content-hot ul li {
+    width: 120px;
+    height: 180px;
+    background-color: aquamarine;
+    margin: 0px 5px;
+    float: left;
+  }
+  .footer {
+    height: 100px;
+    background-color: #ddd;
+  }
+</style>
+<body>
+  <div class="top"></div>
+  <div class="container">
+    <!--header start-->
+    <div class="header clearfix">
+      <div class="logo"></div>
+      <div class="nav clearfix">
+        <div class="nav-top"></div>
+        <div class="nav-bottom"></div>
+      </div>
+    </div>
+    <!--header end-->
+    <!--main start-->
+    <div class="main">
+      <div class="main-top clearfix">
+        <div class="main-top-menu"></div>
+        <div class="main-top-content">
+          <div class="top-content-banner"></div>
+          <div class="top-content-hot">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-top-recommend"></div>
+      </div>
+    </div>
+    <!--main start-->
+  </div>
+  <div class="footer"></div>
+</body>
+```
+
+:::
 
 ## 八、作业
 
@@ -1178,17 +1268,29 @@ order: 7
 
 ![前端必会的3种css布局技术](https://www.arryblog.com/assets/img/7.caf0e10f.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076413866951279139?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076413866951279139?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 
 ### 2、酷狗音乐热门榜单
 
 ![酷狗音乐热门榜单](https://www.arryblog.com/assets/img/8.bde54db2.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076790115187720740?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076790115187720740?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 
 ### 3、小米商城产品展示效果
 
 ![小米商城产品展示效果](https://www.arryblog.com/assets/img/9.5425fb4a.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7077545738938516008?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7077545738938516008?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 

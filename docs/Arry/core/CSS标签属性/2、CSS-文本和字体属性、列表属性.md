@@ -1001,7 +1001,11 @@ outside 效果 | inside 效果
   + C、font: "黑体" 12px italic bold; 
   + D、font: 12px "黑体" italic bold; 
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); "><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124); ">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px; ">正确答案：A</p></details>
+:::details 自己先分析，再点击查看正确答案
+
+正确答案：A
+
+:::
 
 ### 2、p 标签的 font-size:20px; 给 p 标签设置行高属性， 行高是文字大小的 2 倍，下列哪个代码不可以实现 ？
 
@@ -1012,7 +1016,11 @@ outside 效果 | inside 效果
   + C、line-height:200%; 
   + D、line-height:20%; 
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238); "><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124); ">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px; ">正确答案：D</p></details>
+:::details 自己先分析，再点击查看正确答案
+
+正确答案：D
+
+:::
 
 ## 六、总结：本章重难点
 

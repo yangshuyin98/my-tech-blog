@@ -1271,13 +1271,21 @@ p:empty {
 
 ![小米官网左侧菜单](https://www.arryblog.com/assets/img/5.fc337d76.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7075314504166277646?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7075314504166277646?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 
 ### 2、精美的 Tab 选项卡菜单（CSS 精灵图）
 
 ![精美的Tab选项卡菜单](https://www.arryblog.com/assets/img/6.97397b1c.jpg)
 
-<details class="custom-block details" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">点击查看完整版视频讲解</summary><iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076251920083452416?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe></details>
+:::details 点击查看完整版视频讲解
+
+<iframe width="100%" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7076251920083452416?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen="allowfullscreen"></iframe>
+
+:::
 
 ## 十、总结：本章重难点
 
