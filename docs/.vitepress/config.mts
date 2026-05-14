@@ -70,6 +70,11 @@ export default defineConfig({
               { text: '综合PC端项目开发', link: '/Arry/core/综合PC端项目开发/' },
               { text: '移动端、响应式项目开发', link: '/Arry/core/移动端、响应式项目开发/' },
               { text: '服务器部署', link: '/Arry/core/服务器部署/' },
+              { text: 'HTML&CSS代码规范', link: '/Arry/core/HTML&CSS代码规范/' },
+              { text: 'JavaScript核心', link: '/Arry/core/JavaScript核心/' },
+
+
+
               { text: '知识点', link: '/Arry/core/knowledge/' },
             ]
           },

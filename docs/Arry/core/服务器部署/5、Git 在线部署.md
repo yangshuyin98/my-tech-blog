@@ -1,0 +1,184 @@
+---
+title: "Git 在线部署"
+source: "https://www.arryblog.com/guide/deploy/git-deployment.html"
+category: "服务器"
+order: 5
+---
+
+# Git 在线部署
+
+
+
+在本次的项目部署中，我们将直接使用 Git Bash 作为 SSH 登录服务器完成所有的操作，同时将在服务器中使用 Git 完成在线部署。
+
+## 一、Git 项目管理快速入门到实践
+
+
+
+- Git 是什么 ？
+- Git 的安装、配置
+- 创建本地项目版本库
+- 初始化项目、添加远程仓库提交地址
+- Git 本地提交，推送项目至远程仓库、创建分支
+- 克隆远程仓库项目至本地（自己现有项目、克隆开源项目）
+- 使用 GitHub 自带的传送门，一键直达
+
+[点击查看，详细 Git 项目管理完整操作步骤 (opens new window)](https://www.arryblog.com/guide/html5/git-introduction.html)👆
+
+## 二、购买云服务器
+
+
+
+将使用华为云服务器完成部署（依然选择中国香港地区的，可实现快速域名部署）
+
+关于华为服务器按量按需购买步骤和流程。可查看往期笔记 [https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html)👆
+
+## 三、SSH 登录服务器
+
+
+
+如果是 window 电脑，直接使用 `Git Bash` 打开命令行窗口（安装 Git 客户端即可），可直接使用 Linux 或 Unix 命令行，非常好用，Git Bash 自带 SSH 功能。当然也可使用 Xshell，我们本次学习直接使用 Git 相关工具直接完成部署。
+
+如果是 Mac ，直接使用自带的命令行工具即可，或者 Git Bash 也可以
+
+### 1、在 Git Bash 中登录服务器
+
+> 在 `Git Bash` 命令行中输入以下命令登录
+
+```shell
+# ssh 用户名@服务器公网IP
+ssh root@119.12.174.37
+
+# 登录过程中会提示我们是否继续链接，输入 “yes” 即可
+
+# 输入密码
+root@119.12.174.37's password: 输入服务器密码
+
+# 即登录成功
+```
+
+![image-20220831155505942](https://www.arryblog.com/assets/img/image-20220831155505942.ba7b17b5.png)
+
+### 2、Linux 服务器安装 Git，下载代码到服务器
+
+
+
+服务器安装 Git ，点击查看官方教程：[https://git-scm.com/download/linux (opens new window)](https://git-scm.com/download/linux)👆
+
+```shell
+yum install git -y
+```
+
+> 安装完成，查看 Git 版本
+
+```shell
+git --version
+```
+
+![image-20220831164540837](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2cAAABtCAIAAACqWo7JAAAbWUlEQVR4nO3dW2wc13kH8G9dCXXSOkUbow8dEixRKRePgbTQw/FKm4KLPEmYBxUYOHxY1gEaSClmUamdBlgWDhCgbjlBMA1VzAS2kjwEnBaEMQ8KMJaAosWyKC16AAlIAY2bmGy3LHmSNoYT1xc0jm1tH85czux1lpflivr/npazZ8+cMzOL/XiupXa7TQAAAAAAAz1y1AUAAAAAgAcAokYAAAAAGA5RIwAAAAAMh6gRAAAAAIY7MULaDz6g55+nRx6hL32JHkG4CQAAAPAQKY0wh/prX6Of/5yI6LHH6OpVBI4AAAAAD49ikd9779Ebb9DcXPzn22/T8jLdv394xQIAAACAiVIsavzmN8l16dOfposX6VOfIiJ6+2164YVDLRkAAADAsVcaaMwluXv3bvfxu3fvipIMiRo/uE9Ok975/B9Su03f+Q595jP0+c/T44/TiRNvPP25b//QvN/+8FAK3tPWtXPSdTx3beuwz3L5Vq8zp0eJ6NblXkcBAAAAimr3MeZi3Llzp3yu0hE43r17t3yucufOHRocNX5wn5b/id54l5a///F3vmjQW2/Rm28SEZ058/qlP/juj//6rfd/+u3X/vxwAseta+dygdjWtXOl068+K13KZ189fQix2q3Lp68+ebPdbrfbNy9dvxDnv/nq7bPLm/GJXzifpi0990TXUQAAAIAHz5kzZzZeXpcDRxEybry8fubMGRoQNYqQ8d33iIg+vE/L//r4O180aH2dfvhDeuqp/6TWidJJovY77//s0AJHya3Lp198erP9wvm4be/y5culGxfbm8v3Lhx8G9+liyIAPH/xEt17LWnQfPITp/LJtq49d2/5u1c6jgIAAAA8oOTAsSNkpAFR4/P/HIeMwof36Rvff5w07Ref/O2/ufeF3/345/5E/Zb6658lonfe/9nK1le6MhCNhbcuZ33JWW9uv17e5Pity6XTV2/T9QvxZ2/duH7p2Suntq6du0A32+12+yJdP/vEaTp15dlL12/c6spH6rzuPNir/1l2/svL956LyyvOSkRbr92j6xfyn9p66UV6mr4+/Iy0de3coXWnAwAAABygNHDsCBlpQNTYva7OoyeJqF26/wgR/fS9HxPRYyd/g4iISv3aGq9fuHGx3W6/fOUU3bpcunAv7eS9SReyALH7+PkX2pvLZ+nSzfizN65funietl56kZa/fJ6I6PQTZ0Xb3+knzopTyb3Fm0+/ePryrc7MX75yirauPZP0Pw/oU7599XSpVCpduH72idNERHTqysvxZzaX710QEeDmq7dvX331YnyUrj5zbatfMSRp0JrWHuMhAQAAjsLkTEN5UPSNGr/0+/TYo9mfHzlJVyub9Ob3Tr73b3906iur//FXfutrr/zke0Slj554bOH0cz0zuXQzicxu3bh+VurOPf/l5bPXb9zqf7yPpJt489XblHtx68b1JNgrlU5fvU33XtvqzJyITn3iSbp+IdfylzYNnru2RbR17ZmrlMSZN5+82hn2nbry7KXbL74kPn42jmGzoz2LcerKy+2XRSlufT0OWm/ShVKpVLpwL8kCAAAAxqrfHJQjmYkyOdKO6Y4xjjSorbFEVz8XB44fOUl/+tnNk//79/TR36OTv/VrP/u7L/zOX/zXuz8QIeMXP2mfKJ0cvVRJQ97w46efOBuPLxQR5da1G/dEE2PcCik+l7ZYJi2LPZx/od1ut79Lz6QdyOJI0hb50ou3415p6hzY2F2o3sUfVIzzL8QtnMlZ+xQTAAAAYOzksYzdk2OGBNof3m9/e739i3dfa//oq+3/+UZ89PVvtX/8l2/+379f/8GfvX//F30+mnQxx25ekgOqm5eSP/odz308+WNz+SwR0dnlzeyVlH+a/uYl8VI+eHN5ebO9ubx8s2fx5FKnmaYf39yUTyOVsOtlr2Lk8gQAAADIDAjGhsZpB+vOnTsnf/nRO3fu9DtYrDT//fX2j77a/tFX22/9Y/vtf4lf/+RvB36mOyy7eSmLZeV3eh/viAvz0WW/E/bLJTuWnaxHzNhZnEs3O3PJl6FXZt3FQNQIAAAAfQxu/BtzSTpCRkEs1thutwvuQ32ffrJMH76dHXjkV+g3r1LpRIHPHpxbl0sXrmd/nl3eRAcvAAAAwFgUjBopFzgeScgIAAAAAEeneNRIRPfp9eeJPqTH/xghIwAAAMBDZaSoEQAAAAAeUoP2oQYAAAAAEBA1AgAAAMBwiBoBAAAAYDhEjQAAAAAwHKJGAAAAABgOUSMAAAAADIeoEQAAAAAAAAAAAAAAAAAAxqOU/1OzmiaTD4R2tRGMs0AwCVTDc3RFOsD9es2Njqw8AAAAcOQeuO2kVc1YmNeZiGh46C81JjCYUQ1rMS0j91eX3CCS3uyIyHrH5qpmLZpZPVdX5Dwmhmp4TnmjXnMj1fAcffdQ/smI/5fBfzDD4EIBAMBh6hE1TnCzkmp4jk6hXa8GURxXOdb2hP1EdkSFiqKbi9Qa7ZJqlpdEjERECtPnd9aCaGx3JXJrVTd+LS56H7PTCu1uR/GrcHWi7gQAAAAcHs1qNj1DPbLzq4bXbDYtreebPQp31OXtQbOazWbT0kShVM3wmvkyqoY3pNAii6ZnxJmQqhnp67EbVN7s+quGdxR3YuADAwAAAAfowemh1iyTcb8umuxyXcBHWqxO6swUEfGdlmgXjIK1jXm9b1NdzxyMeUZEoV1zk5a7KJjMxl91ZoqkpkbxCgAAAI6lwlGj6HcN7WqjpVmL80wRIVt+CFV+PF+4utToGIvXN0FuGg4zm00z+SPuMNcqjLi/FonEjk52vRqIwXTTs0TSsEGpeD3HPaqasTBfTipAnIcb+UGDqmEtpu9zznc3Rhg8Ga1tcF1X9AXNFRdmdlpJC16EOldWiLi/Mrizd2g1xyHrlVZnpohvtEbNQBq8yUN7ab3imCx5pDpnZuVHTgx9YMZBFKJ7GKFmNbN60JCbVfib1e+ZHHyh5Bz6fDfT4rZy5bRrkzX0AwAAjtqoq3zPGJ5jphFXjmY1HT0bjKcozHQ8ue9waIIBRFSyFpFoiwvtzng0TpYvnsJ0J99tqhqeY+pyBRSF6fNzqpxAfl9RFFaeG6HnNXKXfE7EzKZnGYblmVOh3f0jruhOs9n0PKur43l2WiHiG2uRalie6Km2Orunh1bz0IlOdJOJiK3ZdHQlrlPxIQNxLeK/FGY6+fn7ky9Y8TkRq+SfYdWYZ1LYX/BmDfhm7fuZLPTVm+kspzlhYz8AAOCojRg1Ml2n0Lfr1Wq1WrVD6R3NMhkR8eTNuu1zIoXNJ788gxMEDXHQ50QU2tWMiLiyDlB1rqzwHdGqJdrlUqqxqCvEw/gM1bodEin6gpZPIBWiWq3W67a/sZ2miFv60rer9bq9ujbSRYrjRlKYrjMKV/u3Gg4InOes9GdeYbrpSImGVnMMgoa4WeJK1X0u3bViLX3xvZCehzA/1iB+JLqetNy7fR+Y8YjWNrrCRnWurCT/4RS/Wf2/WUOfycEXigp8N+MCKFkK8QBPz+7n4gAAwHEzYtTIQ7vWSHpzg0Y17UTTKulYvGRAn4idlLhRZGiComan00BRW8itYCN+rv2s6y0SbUFTM6qUQHTgZS2VURS42Z/R9i4RKeWFtHkvioLc5OV4qkpevknVc3TybREGKczsaFqK3Fr62x+n6IobFb1MuZ94yn7ih1azAFWL2zGbnpVOtNGs0eaVdMyfXh+pOzO5F0vZ89AQwfZYFbibAxNE7moo35z4oQxX49C18M3q+80q8kwOqWOhrx4P7WqWwl0NabRHCgAAjr8RZ8PsDgwNkibAWDzETxp2ODRBAa0dTmx6ltRZy2Sc86zjTsSTutPsnHySnCDt/B2QfdCwK57JmG4y3dzDQomaZTIltKtuQBTUAjFoTe+5PlAUBY0aWU2TsYpGQe7tcLUh/cTPlB1dKc+pbhQVqGaBQi6kPcMK03Wm6/GowNAuHvqJkaYt2tugxiL34oEQrIcmY8nNESFaFkEXvlmDvln7fSaJCnz1Bn+1AQAAHpw51K0dTnpFoyCItneJmNlkRNy3N8rmSBOUCwgatYBUzZirlHXxSz0vTy8IGtUBP68dQQNFbs2e7hkXxlo7nFivwWySaHuXaEiaUWiVdApHUk+FiHhoF5z+kM2/yOKh5NWDtcT04LtZJEEcNsbTn0QoPWQm0+iGPJMAAADjcKBRY0erYdwJKTVyDE3Ql2gbqWgUBMGKX5nSGYX+ktuaK8czaEO7uk40eAatiNDSZqGB5wvcKHBdUjXLMVk2I7qQqRlVqubguFDqcBdEEJLLQqzmk1vXZl8ThaVIKKnnyBm09rkpjLgq+eeh61o8GIIVf57prKJRa2ae9Zgwf0Czuvf1TO79qwcAABAbdQ51P8F6SETMTFemVrV4tkPcCTk0gYRVpDnDyVAudzWMx49FbqNWrdYabpSNEaw2AnEKRV+0DFX6uKplw8HWNjiRojueoWVJ5BSkGZ4lv0m0M9JYu9YOF2XIFuhe6Ph9VrU0fzWep5AbE5hUI7tQC7oipRlazXFQ58r7GNRIyWA9ZmbLoVvenqdQ93pgxiiZE2MtlKUhjUR0MDdrv8/kKF89AACA/g6srTFo2JWmyRTddPR06Tzi2W/o0ARE6XArZjrZ+ntJl6cY3eV403Yyt0BVtbnZVjbEKx3/5bBct3Vox2kid8kvO7rSUQgpBU0rjJks9yaNEBRF7mqomyxfA+L+UlbL2YppmvmT59uMRNtVvoxyr+fQao5BtlJjNrxxNHEtpQvFw5CzYb31HQY9MOMT33XGqGtTxYO4Wft8Jot99QAAAIY5qLZGIgoa1bqfrZ7CeWjXc+sED01ARJG7ZIdcakrhfEfKoFa3d6fmnXgq6+JipWP+R9Co1W1fyoDz0LelYWaRW6vXc2fIpwhWeny+PkoQEjTqdlct5Z/n1nqWf+/cI7cmr0PTlcPwah42rcLi5lNpIc0RRW4texx46NdrKzuDP9E7lwEPzPiI9ryeQxr3fbP2/0wW+uoBAACMZgL3dYYjNnzf7IOiWSOsEQ4AAADj1aOHWpHXCXmwZsTCARELBkkHDmMhRVUzZltrycKD8RhPjLUDAACYUA/Kyjtw/MxWdNPsHK2HsXYAAAATqnTUBYCHlqoZC/PlZOdjzsONPaxeDQAAAGOCqBGOwPtPPXXURYDRnHzllaMuAgAAHLEDnEMNAAAAAMcWokYAAAAAOAya1Ww2m01LO+qCHK4JqKaqGYbl7XUlGtWwvHhdy6bn7WHjGFWzPCkHa49bz+yvFgAAADApMId64uQnidCeFq3uWDlHUXRzkVojbYasLZhMzoGZjkXFl2E6iFoAAADAcaUa3kPQCnnINMuzLMPQVHXv62uLhtJsi2fDG335bM0wpP2yDW+0lteDqAUAAABMErQ1TpqgUUva89S5vWWhzkwREd9piabFKFjbmNf1wZ/pLofrpq+THHYKbzd9ALUAAACAiSJHjapmLca9kjy0l9YrjsmSvWE0q2kyKS335a2Rc+8ys9k0e6cbQGTRvRWNZjWzUsSFnI87PnnoLzXk3EXHbGhXGy0pWUeuqmEtSqsE8t2NLJPB1ZRz0Fm6zODqUiNdZTAtbitXTnusm/5Gaxtc1xV9QXPFaWenFeL+njddUTVjUVcotLECNwAAwMMrjRrzI+EUZjqs9ycOSbDizzOdVTQKpPhKNeYZcX8lCRk7husx3fGoO66bMTwztx+enGF+qzxFUZTynOpGheOhjsBSUZjpeJV8WNhRAIWZnjHaqML9idwlv+zozGx6FX+DyvpUaO/h9FJVuW/XXWwtCQAA8BCLV95RjUVdEbFBtVqtVut2mN95OGhUE3bYlUv8bt3nRBTa1UzxWCVa2+BErCIPnVPnykq2M7EoJA/jMlbrdkik6Audg+2YrlOY1CRfWnWurBBxv54WsF63V9cKVpOIxGbJ8oXyOZHC5uVxe0zXlSyFz4lImZ4teB0ORuQuifMyXWcUrq7sM+JT9Pk5jEwEAAB4mImoMQmmlpIN3aKgIaKOMYrc1ZBIjr+0BV3JdiYWIaSfdQdHwYrPiaZmOsIZHtq1RlKToFGVuqej7V0iUsoL6Uo0URQEIzQ0VhgRhXYtu1AiPFPKUlDFQ7uapXBXQ+pRykOlWZ6jk2+L6F9hprOX6ShJDF23Q06K7mCeEwAAwENMRI2z0wplbXpHJlgP5fhLqzCicD0J+WanFSJFd5oZR1d6NOPtrvdvWAsadshJYbrpNJtNz9rDOobE85NCRCOpXIpBBRgHzTKZIkLboFETrZ37CfqioFGzOyJ6AAAAeMhM1t4wImyM+5y1ijyk8eDO0ahVq3Xb99Po8bitCtMRbVPk1uyQOnv/R9Ta4ePvZwcAAIDJIWbDtHY4MWV6lihrbZyd7j2f5FBlc2JaM/Osx7zfwnOyB4sCNwpcl1TNckyWTTYupONCxd37xVelGYupGVUqpLjB+8lPNEdPWCUBAABgfERboxjux8xsXWjLM/c6h5pVpF7fUVvxkjkx1kJZGtJIRGlD5KJlqFL+qjZKJ7NmeFa2eDUR0c5IozeD9ZCImJnu0BcvSnMU3ftiTfUeC2iLZkF9Md0DUNUWega2fXMgIlXLL/JtMiLa3Y6K5wAAAADHSrzyjmjjU5jpJEst8jDkbMTmqXidQCmXzrUSC+Throa6yRgjClfzHwwadsUzGdMdlluyOrTdoGjINq0wZjLdzB0Mi49DDBp2pWkyRTcdKROej2/3pXPJSNKdZlLdYhczvoT5+0DcXxqpjDNl08xfp9Aufif3XwsAAACYLMm4xsit1f1ktR0e+vXayh52Do7cJTvkUusd38P+w6I9r+eQxqBRq9u+dAbOQ98eYehjsNLj8/WRYpigUc2uFBHnoV0f6xreBQSNut1VxtHi2mh7Q75OI18mAAAAeGhoFnoeAQAAAEBI51DL49iIVLGa9dEvxgMAAAAAk6CUvOgaiEYYgAYAAAAAsV9KXpx89Fc/PvNrUx/7GBERcR7+w7espeD1IysYAAAAAAAAAAAAPFBK7z/11FGXAR4uJ1955aiLAAAAACObrB0FAQAAAGAyIWoEAAAAgOFK+T81q2lOHcxWz4dBNTxHp9BeagQRkapZiybbnbSJ3qrhOXp+U53c7tk93u+arK5ZnpnfmOeANuDeA3HR+5xes5om2dVGIL0CAACA42jC2hrFvsaW1vNNzRLRSyPePzAKGqshsfnJWolcW9AVotCuV6vVarVu+5xIKc91lJH74n2hI9TSLJMpRNyPM6nWbX9je4x1KEyrsHh7a3VmqnujawAAADg+Thx1AQrTLJNxvy4avFTDWtTjxjg+8GPjps5MERHfaSWR7drGvK4P/kxHDsY8I6LQrrlJMBkFk9n4q85MEe1uR0Q0O63ErwAAAOBYKhw1in7V0K42Wpq1OM8UEbLl+1ZzwRwPV5eSZsGhCXKLjDOz2TSTP+KuWa3CiPtiqxrNcnSy69UgUg3P0adnibLTqFLxeOgvNToDLlUzFubLSQWI83BjdcWVCqoa1mL6Pud8d6M7k76itQ2u64q+oLniwsxOK2nBi1DnykrvXbg7ajGkmuMwO61QuBpQ3NS4gaZGAACA42vUtsYZwzM7BuUlOnaXURRmOl7FrqVR5dAEA4ioZC0i0RYX2tWgV5TUMWZQYbrjkTwir3tQoaIwfX5nLYiingkURVHKc6obFQ4b3SW/7OjMbHoVf4PK+lRodw8JVHSnqfeMrGenFbGVYxph89DPh7XDq3nopHuZhfi609TpKIdgAgAAwOEZcVwj03UKk+F2dii9IzauzsbixQP6slGHgxMEDXHQ50QU2tKYPxGAZB2g6lxZSQbQiXa5lGos6grxMBsOGBIp+oKWTyCPGKxW67lBg0lLXzbqsF63V9dGukiRu+RzIlKYrjMKV/u3GorAuecwzjnLSRplFaabjpRoaDXHIGiImyWuVN3n0l1DyAgAAHAcjRg18tCuNZJmr6CRzePQKulYvGRAn4idkokgQxMUNTudBopi4klKnSsrxP2s8S4KVnxONDWjSglEU1jWchdFgZv9GW3vEpFSXjA0NX0/kBsaNavZTQ78NMtzdPLtuh1yIoWZjpebrxO5tTQejVN0xY2KXqZcdC1N+hlazQJUzfJEyT3LSKqqWX0nIvWURfKz0wqF65g9DQAAcJyN2EO9OzA06JhDGw/xk4YdDk1QQGuHE5ueJXXWMhnnXEkDRxFPxt2ksuQEaefvgOyDhl3xTMZ0k+lmj87hYTTLZEpoV92AKKgFoi9Zd6zt7jVpoiho1MhqmoxVNApyb4erDSm6nik7etpPPrSaBQq5kK7rozBdZ7oe9zGHdvHQT4w0TedPY1AjAADA8fagzKFu7XDSKxoFQbS9S8TMJiPivr1RNkeaoFxA0KgFpGrGXKWsi+hxXh6oFzSqAyIrrcJIbnaL3Jo93TMujLV2OLHeA0VT0fYu0ZA0o9AqLJnGlNRTISIe2gVXW8xGNWbBa/Kqa+1JAAAAOBYONGrsaDWMO4Sl9sWhCfoSzZIVjYIgWPErUzqj0F9yW3PleMp1aFfXiQZPxRARWqG5LVHgRoHrkqpZjsmyGdGFTM2oUjUHx4VSh7sQrIcmY7ksxGo+uXVt9jXjRAp8k3qOnEHL8JzyRr3minnsE7fWOgAAABywg1rlO1gPiYiZXjJITtXEzJOkQ3hoAgmraNkQvWR4oZuu6B25jVq1Wmu4UTZGsNoIxCkUfdEyVOnjqpYNUVzb4ESK7niGliWRU5BmeJb8JtHOSOtBtna4KEOSo6otdITGqpbmr8ZThHJjApNqZBdKrBuepBlazXFQ58oY1AgAAPBQKbyjYLZeY7/4oGNhHSKKZ8/0WXmnOwH1WhlH6vLULM9k6YaCRKqqzc225GGH3Tvx5XPolX8uRa8yjtbr2rOW8iXtStCV+7A9CYdX8yD13FEwv5PgBG9CCQAAAAfkAHcUDBrVuh+mLXOch3Y9FxEOTUBEkbtkh1xq3uN8R8qgVrd3p+adeOby4mKlY/5H0KjVbV/KgPPQt6WlbyK3Vq/nzpBPEaz0+Hx9lGAsaNTtrlrKIVVrPcu/d+6RWxPTq5NEHTkMr+Zh69hJcPAEIwAAADiGNKvZ9CZrX2c4Yqrh4aEAAACAHrNhFHlRF8yIfSh19ZFP1mbfAAAAMH4H2EMNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwR/8PDNkH6rvvtkcAAAAASUVORK5CYII=)
+
+如需下载最新稳定版的 Git ，可以使用 Git 的源码安装
+
+官方教程地址：[https://www.progit.cn/#_%E5%AE%89%E8%A3%85_git (opens new window)](https://www.progit.cn/#_安装_git)👆
+
+### 3、从远程 Git 远程仓库中克隆下载
+
+
+
+复制 Gitee 或 GitHub 的 HTTPS 下载地址即可
+
+![image-20220831173637509](https://www.arryblog.com/assets/img/image-20220831173637509.46c5d878.png)
+
+Gitee 远程仓库
+
+![image-20220831173940318](https://www.arryblog.com/assets/img/image-20220831173940318.b69edfa1.png)
+
+GitHub 远程仓库
+
+```shell
+# 在Linux根目录创建项目目录
+cd /
+ls
+mkdir workspace
+ls
+cd workspace
+# 克隆Gitee 或 GitHub远程仓库的项目地址
+git clone https://gitee.com/aicodingedu/icoding-pc.git
+
+# 输入Gitee 或 GitHub的用户名和密码（具体如下图）
+# 等待下载即可
+ll
+```
+
+![image-20220831175234737](https://www.arryblog.com/assets/img/image-20220831175234737.8865c795.png)
+
+## 四、Nginx 项目部署
+
+
+
+从 Nginx 入门到实践，完成完整项目基础部署，后期随着课程的深入会同步增加不同方式的项目部署策略
+
+### 1、Nginx Web 服务器安装和启动
+
+
+
+- 通过 yum 方式安装 Nginx
+- 启动 Nginx 服务
+
+[点击查看，详细 Nginx 安装和启动操作步骤 (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html#三、nginx-web-服务器安装和启动)👆
+
+### 2、域名解析
+
+
+
+- 域名结构、顶级（一级）域名、二级域名、三级域名解析
+- 浏览器测试
+
+[点击查看，详细域名解析操作步骤 (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html#四、域名解析)👆
+
+### 3、Nginx 部署静态网站
+
+
+
+- 自定义 Nginx 配置文件
+
+[点击查看，自定义配置文件的操作步骤 (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html#五、nginx-部署静态网站)👆
+
+- 上传网站源代码至服务器，使用以上 Git 方式进行克隆即可
+
+### 4、Nginx 配置 HTTPS 加密协议
+
+TIP
+
+- 什么是 SSL 证书服务 ?
+- 华为云 SSL 证书和 HTTPS 的关系
+- SSL 证书的作用
+- 为什么网站需要 HTTPS ？
+- SSL 证书购买
+- 申请免费 SSL 证书
+- NDS 验证
+- 下载证书
+- 在 Nginx 服务器上安装 SSL 证书
+- 修改 Nginx 配置文件
+
+[点击查看，详细 HTTPS 加密协议配置的具体操作步骤 (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html#六、nginx-配置-https-加密协议)👆
+
+### 5、Nginx 性能优化，Gzip 压缩
+
+
+
+- Nginx 与 Gzip
+- Nginx 事件处理模型优化
+- GZIP 压缩性能优化
+- nginx.conf 配置修改
+- 验证 Gzip 是否成功
+- 添加 Gzip 压缩前后对比
+
+[点击查看，详细 Gzip 压缩配置的具体操作步骤 (opens new window)](https://www.arryblog.com/guide/deploy/huawei-cloud-deployment.html#七、nginx-性能优化-gzip-压缩)👆
+
+## 五、深入 Nginx 多系统部署的解决方案
+
+
+
+会随着 Web 前端高工程师系统课程的深入同步演进不同策略的部署解决方案，一起加油 ！
+
