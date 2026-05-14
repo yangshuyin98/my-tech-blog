@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(node fix-details.js)",
-      "Read(//c/Users/shuyin/AppData/Roaming/Typora/themes/**)"
+      "Read(//c/Users/shuyin/AppData/Roaming/Typora/themes/**)",
+      "Bash(xargs grep -l \"sidebar\")",
+      "Bash(pkill -f \"vitepress\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\shuyin\\AppData\\Roaming\\Typora\\themes"

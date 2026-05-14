@@ -48,6 +48,31 @@ export default defineConfig({
 
     // 设置logo
     logo: '/logo.png',
+
+    // 侧边栏配置
+    // sidebar: {
+    //   '/Arry/core/CSS标签属性/': [
+    //     {
+    //       text: 'CSS标签属性',
+    //       items: [
+    //         { text: '1、CSS 基础认知和基础选择器', link: '/Arry/core/CSS标签属性/1、CSS 基础认知 和 基础选择器.md' },
+    //         { text: '2、CSS 文本和字体属性、列表属性', link: '/Arry/core/CSS标签属性/2、CSS-文本和字体属性、列表属性.md' },
+    //         { text: '3、CSS 盒子模型', link: '/Arry/core/CSS标签属性/3、CSS-盒子模型.md' },
+    //         { text: '4、CSS display 属性、背景属性', link: '/Arry/core/CSS标签属性/4、CSS display 属性、背景属性、其他常用属性.md' },
+    //         { text: '5、CSS 高级（复合）选择器', link: '/Arry/core/CSS标签属性/5、CSS 高级（复合）选择器.md' },
+    //         { text: '6、CSS 三大特性', link: '/Arry/core/CSS标签属性/6、CSS-三大特性：继承、层叠性、优先级.md' },
+    //         { text: '7、浮动、BFC 规范、清除浮动', link: '/Arry/core/CSS标签属性/7、浮动、BFC 规范、清除浮动的最佳实践.md' },
+    //         { text: '8、CSS 定位、层叠顺序', link: '/Arry/core/CSS标签属性/8、CSS 定位、层叠顺序、层叠上下文.md' },
+    //         { text: '9、margin 负值的最佳实践', link: '/Arry/core/CSS标签属性/9、margin 负值的最佳实践.md' },
+    //         { text: '10、圆角、阴影、文本图像处理', link: '/Arry/core/CSS标签属性/10、圆角、阴影、文本图像处理、CSS 函数.md' },
+    //         { text: '11、transition 过渡动画', link: '/Arry/core/CSS标签属性/11、transition-过渡动画与-animation-自定义动画.md' },
+    //         { text: '12、transform 2D 与 3D 转换', link: '/Arry/core/CSS标签属性/12、transform 2D 与 3D 转换.md' },
+    //         { text: '13、CSS、CSS3 系统学习视频合集', link: '/Arry/core/CSS标签属性/13、CSS、CSS3-系统学习视频合集.md' },
+    //         { text: '14、30 个 CSS_CSS3 真实项目案例', link: '/Arry/core/CSS标签属性/14、30-个-CSS_CSS3-真实项目案例布局（视频版）.md' },
+    //       ]
+    //     }
+    //   ]
+    // },
     // editLink: {
     //   pattern:
     //     'https://github.com/yangshuyin98/my-tech-blog.git',
