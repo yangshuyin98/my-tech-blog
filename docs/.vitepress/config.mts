@@ -63,6 +63,7 @@ export default defineConfig({
             items: [
               { text: 'html标签属性', link: '/Arry/core/html标签属性/' },
               { text: 'CSS标签属性', link: '/Arry/core/CSS标签属性/' },
+              { text: '知识点', link: '/Arry/core/knowledge/' },
             ]
           },
           { text: 'Git', link: '/Arry/git/' },
