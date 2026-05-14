@@ -32,9 +32,9 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    search: {
-      provider: 'local'  //官方VitePress内置的离线全文搜索
-    },
+    // search: {
+    //   provider: 'local'  //官方VitePress内置的离线全文搜索
+    // },
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
@@ -55,6 +55,20 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
+      {
+        text: 'Arry',
+        items: [
+          {
+            text: 'core',
+            items: [
+              { text: 'html标签属性', link: '/Arry/core/html标签属性/' },
+              { text: 'CSS标签属性', link: '/Arry/core/CSS标签属性/' },
+            ]
+          },
+          { text: 'Git', link: '/Arry/git/' },
+          { text: 'Markdown', link: '/Arry/markdown/' },
+        ]
+      },
       {
         text: '教程',
         items: [
