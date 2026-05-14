@@ -66,9 +66,10 @@ export default defineConfig({
             items: [
               { text: 'html标签属性', link: '/Arry/core/html标签属性/' },
               { text: 'CSS标签属性', link: '/Arry/core/CSS标签属性/' },
-              { text: 'Flex 弹性、Grid 网格布局', link: '/Arry/core/Flex 弹性、Grid 网格布局/' },
+              { text: 'Flex弹性、Grid网格布局', link: '/Arry/core/Flex弹性、Grid网格布局/' },
               { text: '综合PC端项目开发', link: '/Arry/core/综合PC端项目开发/' },
-
+              { text: '移动端、响应式项目开发', link: '/Arry/core/移动端、响应式项目开发/' },
+              { text: '服务器部署', link: '/Arry/core/服务器部署/' }
               { text: '知识点', link: '/Arry/core/knowledge/' },
             ]
           },
