@@ -86,6 +86,8 @@ export default defineConfig({
       {
         text: '教程',
         items: [
+
+          { text: '小米商城HTML教程', link: '/guide/小米商城HTML教程/' },
           { text: '📘 Vitepress教程', link: '/guide/vitepress-tutorial/' },
           { text: '🔧 Markdown嵌入修复', link: '/guide/markdown嵌入式内容修复/' },
           { text: '🍬 sugar-blog 搭建教程', link: '/guide/sugar-blog-tutorial/' },
