@@ -1,5 +1,5 @@
 ---
-title: "React 项目实战核心重点知识梳理"
+title: "React项目实战核心重点知识梳理"
 source: "https://www.arryblog.com/guide/react/react-advanced.html"
 category: "React"
 order: 22
@@ -34,7 +34,7 @@ order: 22
 | render                               | 方法，用来渲染页面的 html 结构                               |
 | className                            | 定义组件的 class 属性                                        |
 | export default                       | 导出定义好的组件；使用组件时，需要使用 import 导入           |
-| style={{ 属性名：属性值（表达式） }} | 在组件中，书写行内样式；                                     |
+| <span v-pre>`style={{ 属性名：属性值（表达式） }}`</span> | 在组件中，书写行内样式；                                     |
 | onClick={ ()=>{ //事件处理逻辑 }}    | 绑定点击事件                                                 |
 | setState()                           | 方法，用来修改组件 state 中定义的数据，例如： this.setState({isOpen:false}) |
 | this                                 | 可以通过将事件处理函数改成箭头函数，让其内部的 this 指向当前组件（React.component） |
@@ -48,7 +48,7 @@ order: 22
 | state                    | ① state 是组件对内的接口，用于组件内部的数据传递 ② state 是私有的，即 state 是组件的“私有属性”；组件中，如果想修改 state 的状态，需要使用 setState 方法。直接修改 state 的状态（this.state.xxx=yyy），不会触发 render 函数，即页面不会重新渲染 ③ 构造函数 constructor，是唯一可以初始化 state 的地方 ④ state 的更新是异步的：调用 setState 后，state 不会立即改变，是异步操作；因此不能依赖当前的 state 计算下一个 state |
 | props                    | ① props 是组件对外的接口，用于组件间的数据传递。更准确地说，是父组件传递给子组件的数据。 ② props 中的所有数据都是只读的，不可变的（immutable）： a、对象一旦创建就不可以改变，只能通过销毁、重建来改变数据 b、通过判断内存地址是否一致，来确定对象是否被修改 |
 | 函数式编程               | 函数中，自变量不会因为函数的操作而改变，这就是 immutable； 利用 immutable 来编写程序的方式就是函数式编程。 |
-| e                        | React 的事件对象。它是对原生事件对象的封装，可以通过 e.nativeEvent 访问原生的 js 事件对象，它有两个常用属性： e.target：描述的是事件发生的元素 e.currentTarget：描述的是事件处理绑定的元素 可以使用(e.target as HTMLElement).nodeName 来获取事件触发元素的标签名 |
+| e                        | React 的事件对象。它是对原生事件对象的封装，可以通过 `e.nativeEvent` 访问原生的 js 事件对象，它有两个常用属性： `e.target`：描述的是事件发生的元素；`e.currentTarget`：描述的是事件处理绑定的元素。可以使用 `(e.target as HTMLElement).nodeName` 来获取事件触发元素的标签名 |
 | React 事件对象的类型定义 | `React.MouseEvent< HTMLButtonElement,MouseEvent >` 将鼠标移入 html 结构上绑定的事件，就能看到事件对象的类型定义，复制粘贴下来即可。 |
 | setState(参数 1，参数 2) | ① setState 方法是异步更新，同步执行：它本身并不是异步的，但它对 state 的处理机制给人一种异步的假象。state 处理一般发生在生命周期变化的时候。 ② 第二个参数是回调函数，可以在该函数中，使用更新后的 state ③ 可以将第一个参数设置成函数，这样可以在同一个事件处理函数中，多次调用 setState，改变 state |
 

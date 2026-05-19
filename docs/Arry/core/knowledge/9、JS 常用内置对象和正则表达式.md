@@ -3,6 +3,7 @@ title: "JS 常用内置对象和正则表达式"
 source: "https://www.arryblog.com/knowledge/js-es6/js-object-regular-expression.html"
 category: "JavaScript"
 order: 9
+
 ---
 
 # JS 常用内置对象和正则表达式
@@ -20,11 +21,17 @@ Web 前端入门到精通必会的 JavaScript 内置对象和正则表达式知�
 | 名称             | 描述                                                         |
 | :--------------- | :----------------------------------------------------------- |
 | delete           | **操作符。**删除对象的属性                                   |
-| for...in         | **对象的遍历。**for...in 循环用来遍历对象，例如： for (var k in obj) { console.log("对象 obj 的属性" + k + "的值是" + obj[k]); } |
+| for...in         | **对象的遍历。**for...in 循环用来遍历对象，例如：            |
 | call/apply       | **指定函数的上下文。**call/apply 可以指定函数的上下文，两者区别：传参形式不同，例如： fn.call(xiaoming,1,2) fn.apply(xiaoming,[1,2]) |
 | prototype        | **原型。**prototype 是原型的意思，它是函数自带的属性         |
 | hasOwnProperty() | **对象上的方法。**检测某个属性是否为对象自身的属性（不包含继承） |
 | in               | **运算符。**某个属性或方法是否可以被对象调用                 |
+
+```js
+ for (var k in obj) {
+ console.log("对象 obj 的属性" + k + "的值是" + obj[k]); 
+ }
+```
 
 ## 3、包装类
 
@@ -34,6 +41,7 @@ Web 前端入门到精通必会的 JavaScript 内置对象和正则表达式知�
 | String()  | 字符串的包装类 |
 | Boolean() | 布尔值的包装类 |
 
+
 ## 4、Math 对象的常用方法
 
 | 方法名称      | 描述                                 |
@@ -42,6 +50,8 @@ Web 前端入门到精通必会的 JavaScript 内置对象和正则表达式知�
 | Math.max()    | 取一组数中的最大值                   |
 | Math.min()    | 取一组数中的最小值                   |
 | Math.random() | 0-1 之间的随机数（包含 0，不包含 1） |
+
+
 
 ## 5、Date 对象的常用方法
 
@@ -77,6 +87,8 @@ Web 前端入门到精通必会的 JavaScript 内置对象和正则表达式知�
 | .    | 匹配任意一个字符                                            |
 | ^    | 匹配开头                                                    |
 | $    | 匹配结尾                                                    |
+
+
 
 ## 8、转义字符
 

@@ -6,10 +6,17 @@
       "Bash(xargs grep -l \"sidebar\")",
       "Bash(pkill -f \"vitepress\")",
       "Bash(npm view *)",
-      "Bash(node convert-details.js)"
+      "Bash(node convert-details.js)",
+      "Bash(python3 -c \"import urllib.parse; print\\(urllib.parse.unquote\\('22%E3%80%81React%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E6%A0%B8%E5%BF%83%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86'\\)\\)\")",
+      "Bash(python -c \"import urllib.parse; print\\(urllib.parse.unquote\\('22%E3%80%81React%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E6%A0%B8%E5%BF%83%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86'\\)\\)\")",
+      "Bash(cd \"d:/coding/my-tech-blog\" && rm -rf docs/.vitepress/cache .vitepress/cache)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(npx vitepress *)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\shuyin\\AppData\\Roaming\\Typora\\themes"
+      "c:\\Users\\shuyin\\AppData\\Roaming\\Typora\\themes",
+      "d:\\coding\\my-tech-blog\\docs\\.vitepress\\cache"
     ]
   }
 }
