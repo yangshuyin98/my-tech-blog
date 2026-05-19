@@ -1,7 +1,7 @@
 ---
 title: "Git 项目管理快速入门"
 source: "https://www.arryblog.com/guide/html5/git-introduction.html"
-category: "guide/html5"
+category: "Git"
 ---
 
 # Git-项目管理快速入门
