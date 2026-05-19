@@ -11,10 +11,26 @@ Web 前端入门到精通，关键第一步
 
 ## 1、JavaScript 书写位置
 
-| 名称   | 描述                                                         |
-| :----- | :----------------------------------------------------------- |
-| script | 将 JavaScript 代码写在 html 文件中，例如： **`<body>`** **`<script>`**       // 此处写 JavaScript 代码 **`</script>`** **`</body>`** |
-| /      | 引入.js 格式的文件，例如： **`<script src="此处写js文件所在的路径"></script>`** |
+| 名称   | 描述                               |
+| :----- | :--------------------------------- |
+| script | 将 JavaScript 代码写在 html 文件中 |
+| /      | 引入.js 格式的文件                 |
+
+```html
+// 将 JavaScript 代码写在 html 文件中
+<body>
+	<script>
+	// 此处写 JavaScript 代码
+	</script>
+</body>
+
+// 引入.js 格式的文件
+<script src="此处写js文件所在的路径">
+</script>
+
+```
+
+
 
 ## 2、输出语句
 
@@ -156,6 +172,8 @@ Web 前端入门到精通，关键第一步
 | ++   | **自增运算** ，例如： var num1 = 3; num1++ console.log(num1) // num 的值为 4 |
 | --   | **自减运算**，例如： var num2 = 3; num2-- console.log(num2) // num2 的值为 2 |
 
+
+
 ## 18、条件语句
 
 | 名称                                          | 描述                                                         |
@@ -165,8 +183,18 @@ Web 前端入门到精通，关键第一步
 | if...else if...                               | 满足条件时，执行它所对应的代码                               |
 | case                                          | 在 switch 中使用，表示要匹配的每一种情况                     |
 | default                                       | 在 switch 中使用，表示默认情况，当不满足所有的 case 条件时，会执行默认情况 |
-| switch                                        | **根据不同的条件来执行不同的动作**。示例： switch (month) {   case 1:     alert("这个月有 31 天")   break;   case 4:     alert("这个月有 30 天")   break;   default:     alert("请输入正确的月份！！") } |
+| switch                                        | **根据不同的条件来执行不同的动作**。示例：                   |
 | boolean_expression ? true_value : false_value | 三元运算符，当条件表达式 boolean_expression 为真，执行表达式 true_value，为假时执行表达式 false_value |
+
+```js
+ switch (month)  {
+     case 1:     alert("这个月有 31 天")   break;   
+     case 4:     alert("这个月有 30 天")   break;   
+     default:     alert("请输入正确的月份！！") 
+ }
+```
+
+
 
 ## 19、循环语句
 

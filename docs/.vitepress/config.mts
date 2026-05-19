@@ -85,6 +85,7 @@ export default defineConfig({
               { text: "知识点", link: "/Arry/core/knowledge/" },
             ],
           },
+          { text: "首页", link: "/Arry/首页/" },
           { text: "Arry", link: "/Arry/core/" },
           { text: "Git", link: "/Arry/git/" },
           { text: "Markdown", link: "/Arry/markdown/" },

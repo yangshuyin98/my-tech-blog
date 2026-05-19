@@ -1,5 +1,5 @@
 ---
-title: "移动端事件核心知识梳理"
+title: "Web 全栈开发学习路线（基础篇）"
 source: "https://www.arryblog.com/fullstack/"
 category: "全栈"
 order: 23
